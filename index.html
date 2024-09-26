@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+   const screenWidth = window.screen.width; // Obtener el ancho de la pantalla
+const screenHeight = window.screen.height; // Obtener el alto de la pantalla
+const windowHeight = screenHeight * 0.25; // 20% de la altura de la pantalla
+const windowWidth = screenWidth; // 100% del ancho de la pantalla
+const windowTop = screenHeight - windowHeight; // Posicionar en la parte inferior
+
+const newWindow = window.open(
+  "./simulador.html", 
+  "ProjectWindow", 
+  `width=${windowWidth},height=${windowHeight},left=0,top=${windowTop}`
+);
+
+</script>
+
+
+</html>
