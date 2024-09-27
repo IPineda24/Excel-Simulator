@@ -5,36 +5,44 @@ const bancoDePreguntas = {
         nombre: "Product List",
         archivo: "./projects/P1-ProductList.xlsx",
         preguntas: [
-            ["In the 'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll.",
-                "In the 'Sales Data' worksheet, freeze rows 1 and 3 so that the main title and section headers remain visible as you scroll.",
-                "In the 'Orders' worksheet, freeze the first two rows so the title and filter options stay visible as you scroll.",
-                "In the 'Employee List' spreadsheet, freeze rows 1 and 4 so that the title and department headers remain visible as you scroll.",
-                "In the 'Expenses' worksheet, freeze the first three rows so that the header and subheader remain visible while scrolling down the list."
-            ],
-            ["On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
-                "On the 'Orders' worksheet, in the 'Units Shipped' column, use conditional formatting to apply the 3 Traffic Lights (Rimmed) format to the values.",
-                "In the 'Inventory' worksheet, apply conditional formatting to the 'Stock Level' column using the 3 Traffic Lights (Unrimmed) format.",
-                "On the 'Sales Report' worksheet, apply conditional formatting with the 3 Traffic Lights (Rimmed) to the 'Monthly Targets' column values.",
-                "On the 'Employee Performance' worksheet, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the 'Attendance' column."
-            ],
-            ["On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
-                "On the 'Sales Data' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
-                "In the 'Expense Report' worksheet, apply the Orange, Table Style Medium 6 to the existing table.",
-                "On the 'Customer Orders' worksheet, apply the Light Green, Table Style Medium 3 to the table data.",
-                "On the 'Inventory List' worksheet, use the Dark Gray, Table Style Medium 2 for the table."
-            ],
-            ["On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range.",
-                "On the 'Revenue' worksheet, in the 'Projected Sales' column, enter a formula that multiplies the value in the 'Sales Amount' column by the 'GrowthRate' named range.",
-                "On the 'Orders' worksheet, in the 'Total Revenue' column, use a formula that multiplies the 'Units Sold' by the 'PriceIncrease' named range.",
-                "In the 'Budget' worksheet, calculate the 'Estimated Cost' by multiplying the 'Current Cost' by the 'InflationRate' named range.",
-                "On the 'Performance' worksheet, enter a formula in the 'Adjusted Score' column that multiplies 'Score' by the named range 'AdjustmentFactor'."
-            ],
-            ["On the 'Summary' worksheet, apply the Colorful Palette 2 color to the chart.",
-                "On the 'Sales Overview' worksheet, apply the Colorful Palette 3 to the pie chart.",
-                "In the 'Performance Review' worksheet, apply the Monochromatic Palette 1 to the bar chart.",
-                "On the 'Expense Summary' worksheet, change the line chart colors to the Colorful Palette 4.",
-                "On the 'Revenue Breakdown' worksheet, apply the Colorful Palette 1 to the column chart."
+            [
+                [
+                    "In the 'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll.",
+                    "In the 'Products' spreadsheet, freeze rows 1, 2, and 3 so that the title and column headers remain visible as you scroll.",
+                    "In the 'Products' spreadsheet, freeze row 1 so that the title remains visible as you scroll.",
+                    "In the 'Products' spreadsheet, freeze rows 1, 2, 3, and 4 so that the title and column headers remain visible as you scroll.",
+                    "In the 'Products' spreadsheet, freeze rows 1 and 3 so that the title and column headers remain visible as you scroll."
+                ],
+                [
+                    "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
+                    "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Arrows (Colored) format to the values.",
+                    "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Data Bars (Gradient Fill) format to the values.",
+                    "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Flags format to the values.",
+                    "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Color Scale (Red-Yellow-Green) format to the values."
+                ],
+                [
+                    "On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
+                    "On the 'Products' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
+                    "On the 'Products' worksheet, apply the Orange, Table Style Medium 6 style to the table.",
+                    "On the 'Products' worksheet, apply the Light Green, Table Style Medium 3 style to the table.",
+                    "On the 'Products' worksheet, apply the Dark Gray, Table Style Medium 2 style to the table."
+                ],
+                [
+                    "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range.",
+                    "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that adds the value in the 'Current Value' column to the 'Increase' named range.",
+                    "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that subtracts the value in the 'Current Value' column from the 'Increase' named range.",
+                    "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that divides the value in the 'Current Value' column by the 'Increase' named range.",
+                    "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range."
+                ],
+                [
+                    "On the 'Summary' worksheet, apply the Colorful Palette 2 color to the chart.",
+                    "On the 'Summary' worksheet, apply the Colorful Palette 3 to the chart.",
+                    "On the 'Summary' worksheet, apply the Monochromatic Palette 1 to the chart.",
+                    "On the 'Summary' worksheet, apply the Colorful Palette 4 to the chart.",
+                    "On the 'Summary' worksheet, apply the Colorful Palette 1 to the chart."
+                ]
             ]
+
 
         ]
     },
