@@ -1,4 +1,5 @@
 window.location.href = "./projects/P1-ProductList.xlsx";
+window.location.href = "./projects/OutOfPrint.txt";
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {
@@ -54,42 +55,111 @@ const bancoDePreguntas = {
             // Importing Data and Formatting as a Table
             [
                 "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Ensure the table does not use the first row of the data source as headers, but as data.",
-                "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Configure the table to use the first row as data, not as headers, and ensure the result is formatted as a table."
+                "On the 'Out of Print' worksheet, starting from cell A3, import data from the 'OutOfPrint' text file in the Documents folder, and format the first row as data, not headers.",
+                "In the 'Out of Print' worksheet, import data from the 'OutOfPrint' text file starting at cell A4. Use the first row as data, not headers.",
+                "On the 'Out of Print' sheet, import data from the 'OutOfPrint' text file located in Documents, starting at cell B3. Ensure the first row is included as data.",
+                "On the 'Out of Print' sheet, starting at cell A3, import data from the 'OutOfStock' text file in Documents, making sure the first row is part of the data, not headers."
             ],
 
             // Setting Horizontal Text Alignment Variations
             [
                 "On the 'Inventory' worksheet, set the horizontal text alignment of cell I3 to Center.",
-                "On the 'Inventory' worksheet, adjust the horizontal text alignment of cell J3 to Center Across Selection.",
-                "On the 'Inventory' worksheet, set the horizontal text alignment of cells I3 to Center."
+                "In the 'Inventory' worksheet, set the horizontal text alignment of cell J3 to Center.",
+                "On the 'Inventory' sheet, set the horizontal text alignment for cells I3 and J3 to Center.",
+                "In the 'Inventory' worksheet, change the horizontal alignment of cell I3 to Center Across Selection.",
+                "On the 'Inventory' sheet, apply Center Across Selection to the text in cell J3."
             ],
 
             // Adding a Column to the Table with Header Change
             [
                 "On the 'Inventory' worksheet, add only column G to the 'Year-End Inventory' table and rename the header to 'Total Value'.",
-                "On the 'Inventory' worksheet, insert only column G to the 'Year-End Inventory' table and change the header of the new column to 'Accumulated Value'.",
-                "On the 'Inventory' worksheet, add column G to the 'Year-End Inventory' table and rename the header to 'Net Value'."
+                "On the 'Inventory' worksheet, insert only column G into the 'Year-End Inventory' table and change the header to 'Accumulated Value'.",
+                "In the 'Inventory' sheet, add column G to the 'Year-End Inventory' table and rename the header to 'Net Value'.",
+                "On the 'Inventory' worksheet, add column G to the 'Year-End Inventory' table and update the header to 'Total Revenue'.",
+                "In the 'Inventory' sheet, insert column G into the 'Year-End Inventory' table and rename the header to 'Final Value'."
             ],
 
             // Finding Maximum/Minimum Value Using a Function
             [
                 "On the 'Inventory' worksheet, in cell F26, use a function to display the minimum value from the 'Unit Price' column of the 'Year-End Inventory' table.",
-                "On the 'Inventory' worksheet, in cell F26, use a function to show the maximum value from the 'Unit Price' column of the 'Year-End Inventory' table.",
-                "On the 'Inventory' worksheet, in cell F26, use a function to find the lowest value from the 'Unit Price' column of the 'Year-End Inventory' table."
+                "In the 'Inventory' worksheet, use a function in cell F26 to calculate the lowest value from the 'Unit Price' column.",
+                "On the 'Inventory' sheet, in cell F26, use a function to show the minimum value in the 'Unit Price' column of the 'Year-End Inventory' table.",
+                "In the 'Inventory' worksheet, in cell F26, apply a function to return the smallest value in the 'Unit Price' column of the 'Year-End Inventory' table.",
+                "On the 'Inventory' sheet, use a function in cell F26 to find the lowest value in the 'Unit Price' column."
             ],
 
             // Creating a 3D Chart with Variations in Chart Type
             [
                 "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a 3D Bar Chart that shows the 'Total Value' data for each 'Region'. Display the regions as a legend and add the title 'Total Value'.",
-                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', generate a 3D Column Chart for the 'Total Value' of each 'Region'. Ensure the regions are shown in a legend and add the title 'Total Value'.",
-                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a Donut Chart for the 'Total Value' by each 'Region'. Show the regions in the legend and add the title 'Total Value'."
+                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', generate a 3D Column Chart for the 'Total Value' of each region, displaying the regions in the legend and the title 'Total Value'.",
+                "In the 'Comparison' worksheet, create a 3D Pie Chart using the 'Total Value' data from 'Price Comparison by Regions'. Show the regions as a legend and add the title 'Total Value'.",
+                "On the 'Comparison' worksheet, generate a 3D Area Chart displaying the 'Total Value' data for each 'Region' from 'Price Comparison by Regions'. Show the regions in the legend with the title 'Total Value'.",
+                "In the 'Comparison' worksheet, create a 3D Doughnut Chart using the 'Total Value' data for each region from 'Price Comparison by Regions', with a legend for the regions and the title 'Total Value'."
             ],
 
             // Modifying a Chart with Data Label Variations
             [
                 "On the 'Inventory' worksheet, modify the chart to display the series values as data labels at the base of each column.",
-                "On the 'Inventory' worksheet, adjust the chart to display the data labels at the top of each column.",
-                "On the 'Inventory' worksheet, modify the chart to display the data labels at the end of each column."
+                "On the 'Inventory' sheet, adjust the chart to display the series values as data labels at the top of each column.",
+                "In the 'Inventory' worksheet, change the chart to display the series values as data labels inside the end of each column.",
+                "On the 'Inventory' sheet, modify the chart to show data labels inside the columns instead of at the top.",
+                "In the 'Inventory' worksheet, update the chart to display the series values as data labels at the center of each column."
+            ]
+        ]
+    },
+
+    // Proyecto 3 
+    proyecto3: {
+        nombre: "Clients",
+        archivo: "./projects/P3-Clients.xlsx",
+        preguntas: [
+            [
+                "On the 'Customer Billing' sheet, change the margins to Wide.",
+                "On the 'Customer Billing' sheet, set the margins to Custom Margins with 0.5-inch for all sides.",
+                "On the 'Customer Billing' sheet, adjust the margins to Normal.",
+                "On the 'Customer Billing' sheet, set the margins to Custom Margins with 1-inch on top and bottom and 0.75-inch on the sides.",
+                "On the 'Customer Billing' sheet, change the margins to Custom Margins with 0.25-inch on all sides."
+            ],
+
+            // Adjusting Page Breaks (No Variants)
+            [
+                "On the 'Consultants' worksheet, adjust the page breaks so that the worksheet prints on two pages. Cells A1:D23 should print on the first page, and the entire chart should print on the second page."
+            ],
+
+            // Variants of Using the RANDBETWEEN Function for Random Number Generation
+            [
+                "On the 'New Clients' worksheet, in cells C4:C13, use the 'RANDBETWEEN' function to generate a random 'Consultant ID' number from 1 to 20 in each cell.",
+                "On the 'New Clients' worksheet, in cells C4:C13, use the 'RANDBETWEEN' function to generate a random 'Consultant ID' number from 5 to 15 in each cell.",
+                "On the 'New Clients' worksheet, in cells C4:C13, use the 'RANDBETWEEN' function to generate a random 'Consultant ID' number from 1 to 50 in each cell.",
+                "On the 'New Clients' worksheet, in cells C4:C13, use the 'RANDBETWEEN' function to generate a random 'Consultant ID' number from 10 to 100 in each cell.",
+                "On the 'New Clients' worksheet, in cells C4:C13, use the 'RANDBETWEEN' function to generate a random 'Consultant ID' number from 0 to 30 in each cell."
+            ],
+
+            // Variants of Applying Styles to Cell A1 on the "New Clients" Worksheet
+            [
+                "On the 'New Clients' worksheet, apply the Heading 1 style to cell A1.",
+                "On the 'New Clients' worksheet, apply the Heading 2 style to cell A1.",
+                "On the 'New Clients' worksheet, apply the Accent 1 style to cell A1.",
+                "On the 'New Clients' worksheet, apply the Total style to cell A1.",
+                "On the 'New Clients' worksheet, apply the 20% - Accent 4 style to cell A1."
+            ],
+
+            // Variants of Sorting Clients in Ascending or Descending Order
+            [
+                "On the 'New Clients' worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in descending order.",
+                "On the 'New Clients' worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in ascending order.",
+                "On the 'New Clients' worksheet, in cells B4:B13, use a function to show the clients from cells E4:E13 sorted in descending order by value.",
+                "On the 'New Clients' worksheet, in cells B4:B13, use a function to arrange the clients from cells E4:E13 in ascending order.",
+                "On the 'New Clients' worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 sorted in ascending alphabetical order."
+            ],
+
+            // Variants of Adding Alt Text to the Chart on the "Consultants" Worksheet
+            [
+                "On the 'Consultants' worksheet, add the alt text description 'Chart showing consultant weekly hours'.",
+                "On the 'Consultants' worksheet, add the alt text 'Weekly consultant performance chart'.",
+                "On the 'Consultants' worksheet, add the alt text description 'Consultants working hours per week'.",
+                "On the 'Consultants' worksheet, add the alt text 'Weekly working hours comparison'.",
+                "On the 'Consultants' worksheet, add the alt text 'Chart illustrating hours worked by consultants during the week'."
             ]
         ]
     }

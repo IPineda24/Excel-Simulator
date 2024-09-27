@@ -1,0 +1,10 @@
+Género,           Id. de inventario,            Región,              Id. de autor,           En stock,        Precio unitario
+Misterio,             11222,                    Este,                 76-9160,                   3,                  180
+Romance,              11636,                    Este,                 77-9133,                   12,                 190
+De no ficción,        12428,                    Este,                 32-7020,                   3,                  210
+De no ficción,        12702,                    Este,                 81-7230,                   8,                  210
+Misterio,             12522,                    Este,                 96-9180,                   12,                 190
+De no ficción,        12428,                    Este,                 32-7020,                   7,                  220
+De no ficción,        12702,                    Este,                 81-7230,                   6,                  210
+Misterio,             17473,                    Este,                 32-1822,                   0,                  210
+Romance,              18361,                    Este,                 83-2623,                   2,                  200
