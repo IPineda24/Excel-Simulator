@@ -53,62 +53,43 @@ const bancoDePreguntas = {
         preguntas: [
             // Importing Data and Formatting as a Table
             [
-                "Import data from the 'OutOfPrint' text file into cell A3 of the 'Out of Print' worksheet, ensuring the table uses the first row of the data source as headers.",
-                "Import data from the 'OutOfStock' text file into cell A4 of the 'Out of Stock' worksheet, ensuring the first row of the data source is used as headers and formatted as a table.",
-                "On the 'Out of Print' sheet, import data starting at cell B3 from the 'OutOfDate' text file, formatted as a table with the first row as headers.",
-                "Import data from the 'Backlog' text file into the 'Inventory Overview' sheet at cell A5, ensuring the first row is used as headers and is formatted as a table.",
-                "In the 'Out of Print' sheet, import data from the 'OldEditions' text file into cell A2, and ensure the table uses the first row as headers.",
-                "Import data from the 'ArchivedBooks' text file into cell C3 of the 'Out of Print' worksheet and format it as a table with headers."
+                "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Ensure the table does not use the first row of the data source as headers, but as data.",
+                "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Configure the table to use the first row as data, not as headers, and ensure the result is formatted as a table."
             ],
-            // Setting Horizontal Text Alignment
+
+            // Setting Horizontal Text Alignment Variations
             [
-                "Set the horizontal text alignment of cells I3 on the 'Inventory' worksheet to Center Across Selection.",
-                "On the 'Inventory' sheet, set the horizontal text alignment of cells H3 to Center Across Selection.",
-                "In the 'Inventory Report' worksheet, center the text across cells J3 using Center Across Selection.",
-                "On the 'Inventory' worksheet, align the text in cells G2 horizontally using Center Across Selection.",
-                "Center the text horizontally across cells F3 in the 'Inventory Overview' sheet using Center Across Selection.",
-                "Apply Center Across Selection to cells L2 on the 'Stock Summary' worksheet.",
-                "On the 'Inventory' worksheet, align the text in cells K4 using Center Across Selection."
+                "On the 'Inventory' worksheet, set the horizontal text alignment of cell I3 to Center.",
+                "On the 'Inventory' worksheet, adjust the horizontal text alignment of cell J3 to Center Across Selection.",
+                "On the 'Inventory' worksheet, set the horizontal text alignment of cells I3 to Center."
             ],
-            // Adding a Column to the Table
+
+            // Adding a Column to the Table with Header Change
             [
-                "Add only column G to the 'Year-End Inventory' table so that 'Total Value' becomes the header of the new table column.",
-                "On the 'Year-End Report' sheet, add column H to the table and name the new header 'Net Sales.'",
-                "Add column F to the 'Year-End Inventory' table in the 'Inventory' worksheet, and name the new header 'Gross Margin.'",
-                "In the 'Inventory' sheet, add column J to the table, and name the header of the new column 'Sales Forecast.'",
-                "On the 'Year-End Summary' sheet, add column G to the table and label the header as 'Stock Turnover.'",
-                "Add column I to the 'Inventory Status' table, and rename the header of the new column 'Average Cost.'",
-                "In the 'Year-End Inventory' sheet, add column E to the table, and use 'Total Sales' as the new column header."
+                "On the 'Inventory' worksheet, add only column G to the 'Year-End Inventory' table and rename the header to 'Total Value'.",
+                "On the 'Inventory' worksheet, insert only column G to the 'Year-End Inventory' table and change the header of the new column to 'Accumulated Value'.",
+                "On the 'Inventory' worksheet, add column G to the 'Year-End Inventory' table and rename the header to 'Net Value'."
             ],
-            // Finding Maximum Value Using a Function
+
+            // Finding Maximum/Minimum Value Using a Function
             [
-                "In cell F26 of the 'Inventory' worksheet, use a function to display the maximum value from the 'Unit Price' column of the 'Year-End Inventory' table.",
-                "On the 'Sales Report' worksheet, use a function in cell E30 to find the maximum value from the 'Quantity Sold' column.",
-                "In cell D15 of the 'Inventory Summary' worksheet, use a function to find the highest value from the 'Revenue' column in the 'Year-End Sales' table.",
-                "In the 'Stock Overview' worksheet, use a function in cell G20 to calculate the maximum value from the 'Stock Remaining' column.",
-                "On the 'Inventory' sheet, use a function in cell H26 to find the maximum value from the 'Discount' column of the table.",
-                "In the 'Product Sales' worksheet, use a function in cell F28 to calculate the maximum value from the 'Profit Margin' column.",
-                "Use a function in cell I25 of the 'Inventory' worksheet to display the maximum value from the 'Total Cost' column."
+                "On the 'Inventory' worksheet, in cell F26, use a function to display the minimum value from the 'Unit Price' column of the 'Year-End Inventory' table.",
+                "On the 'Inventory' worksheet, in cell F26, use a function to show the maximum value from the 'Unit Price' column of the 'Year-End Inventory' table.",
+                "On the 'Inventory' worksheet, in cell F26, use a function to find the lowest value from the 'Unit Price' column of the 'Year-End Inventory' table."
             ],
-            // Creating a 3D Pie Chart
+
+            // Creating a 3D Chart with Variations in Chart Type
             [
-                "On the 'Comparison' sheet, create a 3D Pie Chart using 'Total Value' data from 'Price Comparison by Regions.' Include a title and legend.",
-                "On the 'Analysis' worksheet, create a 3D Pie Chart using 'Sales by Regions' data, showing 'Net Sales' per region. Include the title 'Regional Sales.'",
-                "In the 'Comparison' sheet, create a 3D Pie Chart for the 'Total Revenue' data from 'Product Comparison by Regions.' Include a legend and title 'Revenue by Region.'",
-                "On the 'Sales Overview' worksheet, create a 3D Pie Chart for the 'Gross Sales' data by product categories, showing the title 'Sales Distribution.'",
-                "On the 'Regional Analysis' sheet, create a 3D Pie Chart using the 'Units Sold' data by region. Add a legend and the title 'Units Sold by Region.'",
-                "In the 'Inventory Report' sheet, create a 3D Pie Chart for 'Inventory Value' data, showing the breakdown per region with the title 'Inventory Distribution.'",
-                "Create a 3D Pie Chart on the 'Product Comparison' sheet, showing 'Net Profit' data by region. Title the chart 'Profit Comparison.'"
+                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a 3D Bar Chart that shows the 'Total Value' data for each 'Region'. Display the regions as a legend and add the title 'Total Value'.",
+                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', generate a 3D Column Chart for the 'Total Value' of each 'Region'. Ensure the regions are shown in a legend and add the title 'Total Value'.",
+                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a Donut Chart for the 'Total Value' by each 'Region'. Show the regions in the legend and add the title 'Total Value'."
             ],
-            // Modifying a Chart
+
+            // Modifying a Chart with Data Label Variations
             [
-                "Modify the chart on the 'Inventory' sheet to display the series values as data labels in the center of each column.",
-                "On the 'Sales' worksheet, modify the bar chart to display series values as data labels inside the end of each bar.",
-                "In the 'Revenue Overview' worksheet, modify the line chart to show data labels for the series values at each point along the line.",
-                "Modify the pie chart on the 'Product Sales' sheet to show percentage data labels next to each slice.",
-                "In the 'Inventory Summary' sheet, adjust the bar chart to display the series values as data labels above each column.",
-                "On the 'Year-End Report' worksheet, modify the line chart to display the series values as data labels below each point.",
-                "Modify the area chart on the 'Sales Analysis' sheet to display the series values as data labels within the filled area."
+                "On the 'Inventory' worksheet, modify the chart to display the series values as data labels at the base of each column.",
+                "On the 'Inventory' worksheet, adjust the chart to display the data labels at the top of each column.",
+                "On the 'Inventory' worksheet, modify the chart to display the data labels at the end of each column."
             ]
         ]
     }
