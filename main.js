@@ -1,5 +1,4 @@
 window.location.href = "./projects/P1-ProductList.xlsx";
-window.location.href = "./projects/OutOfPrint.txt";
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {

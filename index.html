@@ -3,20 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
     <title>Document</title>
 </head>
 <body>
-<h1>Bienvenido al simulador </h1>
-<p>Para usar este simulador debes hacer lo siguiente: </p>
-
-<p>Activar el uso de popUps </p>
-  <img src="img/image1.png" alt="">
-  <p>Habilitar permisos </p>
-  <img src="img/image2.png" alt="">
+  <div class="container">
+    <h1 class="title">Bienvenido al Simulador</h1>
     
-  <h1>Create By Irvin Pineda</h1>
-  <h2>©(copyright)</h2>
-</body>
+    <p class="instructions">Para usar este simulador debes hacer lo siguiente:</p>
+    
+    <div class="step">
+      <p class="step-title">1. Activar el uso de pop-ups</p>
+      <img src="img/image1.png" alt="Activar Popups" class="step-image">
+    </div>
+    
+    <div class="step">
+      <p class="step-title">2. Habilitar permisos</p>
+      <img src="img/image2.png" alt="Habilitar Permisos" class="step-image">
+    </div>
+
+    <div class="step">
+      <p class="step-title">3. Refresca la pagina "F5"</p>
+    </div>
+<br><br><br>
+    <footer class="footer">
+      <h1 class="footer-text">Creado por Irvin Pineda</h1>
+      <h2 class="footer-text">© Copyright 2024</h2>
+    </footer>
+  </div>
 
 <script>
    const screenWidth = window.screen.width; // Obtener el ancho de la pantalla
