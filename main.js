@@ -16,16 +16,16 @@ const bancoDePreguntas = {
             [
                 "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
                 "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Arrows (Colored) format to the values.",
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Data Bars (Gradient Fill) format to the values.",
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Red Data Bars (Gradient Fill) format to the values.",
                 "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Flags format to the values.",
                 "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Color Scale (Red-Yellow-Green) format to the values."
             ],
             [
                 "On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
                 "On the 'Products' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
-                "On the 'Products' worksheet, apply the Orange, Table Style Medium 6 style to the table.",
-                "On the 'Products' worksheet, apply the Light Green, Table Style Medium 3 style to the table.",
-                "On the 'Products' worksheet, apply the Dark Gray, Table Style Medium 2 style to the table."
+                "On the 'Products' worksheet, apply the Orange, Table Style Medium 3 style to the table.",
+                "On the 'Products' worksheet, apply the Light Green, Table Style Light 14 style to the table.",
+                "On the 'Products' worksheet, apply the Dark Gray, Table Style Dark 4 style to the table."
             ],
             [
                 "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range.",
