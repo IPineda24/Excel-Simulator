@@ -161,6 +161,96 @@ const bancoDePreguntas = {
                 "On the 'Consultants' worksheet, add the alt text 'Chart illustrating hours worked by consultants during the week'."
             ]
         ]
+    },
+
+    // Proyecto 4 
+    proyecto4: {
+        nombre: "VolunteerRoster",
+        archivo: "./projects/P4–VolunteerRoster.xlsx",
+        preguntas: [
+            [
+                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
+            ],
+
+            // Insert a Note or Comment
+            [
+                "On the 'Roster' worksheet, in cell G6, insert a New Comment with the text “Requires 5 years of experience”.",
+                "On the 'Roster' worksheet, in cell F3, insert a New Note with the text “Eligible for extra training”.",
+                "On the 'Roster' worksheet, in cell H5, insert a Comment with the text “Awarded volunteer of the year”.",
+                "On the 'Roster' worksheet, in cell D7, insert a New Note with the text “Currently on probation period”.",
+                "On the 'Roster' worksheet, in cell C9, insert a Comment with the text “Completed 15+ years of service”."
+
+            ],
+
+            // Conditional Function Using Volunteer Data
+            [
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Silver” for volunteers with 5 to 9 years of service. Otherwise, leave the “Award Type” blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Platinum” for each volunteer with more than 15 years of service. If less, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Bronze” for volunteers with 1 to 4 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Recognition” for each volunteer with at least 8 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for volunteers with more than 12 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Distinction” for volunteers with over 20 years of service. If less, leave the cell blank."
+            ],
+
+            // Formula for Display Name Format (Last Name, First Name)
+            [
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name Last Name format. For example: Adam Barr.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name - First Name format, separated by a hyphen. For example: Barr - Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names separated by a space. For example: Barr Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name-Last Name format, separated by a hyphen. For example: Adam-Barr.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name followed by the First Name separated by two spaces. For example: Barr Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the full name with the first name in parentheses. For example: Barr (Adam)."
+            ]
+        ]
+    },
+
+    // Proyecto 5
+    proyecto5: {
+        nombre: "CoffeeInventory",
+        archivo: "./projects/P5–CoffeeInventory.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to 'http://fourthcoffee.com'. Display the text 'More information' in the cell.",
+                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to the email address 'info@fourthcoffee.com'. Display the text 'Contact Us' in the cell.",
+                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to 'http://fourthcoffee.com' with the tooltip text 'Visit our website'. Display the text 'Learn More' in the cell."
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Column widths from the source worksheet.",
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Source Formatting.",
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, but paste Values Only.",
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, Transpose the rows and columns.",
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells as a Linked Picture.",
+                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells as Formulas Only."
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the 'Inventory' worksheet, apply the Currency number format to cells D4:D33. Display the numbers with only two decimal places.",
+                "On the 'Inventory' worksheet, apply the Currency number format to cells D4:D33. Display the numbers with no decimal places.",
+                "On the 'Inventory' worksheet, apply the Accounting number format to cells D4:D33. Display the numbers with two decimal places.",
+                "On the 'Inventory' worksheet, apply the Currency number format to cells D4:D33. Display the numbers with four decimal places.",
+                "On the 'Inventory' worksheet, apply the Percent number format to cells D4:D33. Display the numbers with one decimal place.",
+                "On the 'Inventory' worksheet, apply the Number format to cells D4:D33. Display the numbers with commas as thousands separators and two decimal places."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the 'Roasting' worksheet, configure the table style options to automatically shade every other table row.",
+                "On the 'Roasting' worksheet, configure the table style options to include Header Row and Total Row.",
+                "On the 'Roasting' worksheet, configure the table style options to highlight the First Column and Last Column.",
+                "On the 'Roasting' worksheet, configure the table style options to display Banded Columns instead of rows.",
+                "On the 'Roasting' worksheet, configure the table style options to hide the Filter Button from the table.",
+                "On the 'Roasting' worksheet, configure the table style options to use a light color scheme for the table style."
+
+            ]
+        ]
     }
 };
 
