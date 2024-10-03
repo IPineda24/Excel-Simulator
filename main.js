@@ -235,7 +235,7 @@ const bancoDePreguntas = {
                 "On the 'Inventory' worksheet, apply the Currency number format to cells D4:D33. Display the numbers with no decimal places.",
                 "On the 'Inventory' worksheet, apply the Accounting number format to cells D4:D33. Display the numbers with two decimal places.",
                 "On the 'Inventory' worksheet, apply the Currency number format to cells D4:D33. Display the numbers with four decimal places.",
-                "On the 'Inventory' worksheet, apply the Percent number format to cells D4:D33. Display the numbers with one decimal place.",
+                "On the 'Inventory' worksheet, apply the Percentage number format to cells D4:D33. Display the numbers with one decimal place.",
                 "On the 'Inventory' worksheet, apply the Number format to cells D4:D33. Display the numbers with commas as thousands separators and two decimal places."
 
             ],
