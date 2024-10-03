@@ -11,7 +11,7 @@ const bancoDePreguntas = {
                 "In the 'Products' spreadsheet, freeze rows 1, 2, and 3 so that the title and column headers remain visible as you scroll.",
                 "In the 'Products' spreadsheet, freeze row 1 so that the title remains visible as you scroll.",
                 "In the 'Products' spreadsheet, freeze rows 1, 2, 3, and 4 so that the title and column headers remain visible as you scroll.",
-                "In the 'Products' spreadsheet, freeze rows 1 and 3 so that the title and column headers remain visible as you scroll."
+                "In the 'Products' spreadsheet, freeze rows 1 to 3 so that the title and column headers remain visible as you scroll."
             ],
             [
                 "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
@@ -89,7 +89,7 @@ const bancoDePreguntas = {
 
             // Creating a 3D Chart with Variations in Chart Type
             [
-                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a 3D Bar Chart that shows the 'Total Value' data for each 'Region'. Display the regions as a legend and add the title 'Total Value'.",
+                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a 3D Clustered Bar  Chart that shows the 'Total Value' data for each 'Region'. Display the regions as a legend and add the title 'Total Value'.",
                 "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', generate a 3D Column Chart for the 'Total Value' of each region, displaying the regions in the legend and the title 'Total Value'.",
                 "In the 'Comparison' worksheet, create a 3D Pie Chart using the 'Total Value' data from 'Price Comparison by Regions'. Show the regions as a legend and add the title 'Total Value'.",
                 "On the 'Comparison' worksheet, generate a 3D Area Chart displaying the 'Total Value' data for each 'Region' from 'Price Comparison by Regions'. Show the regions in the legend with the title 'Total Value'.",
@@ -98,10 +98,10 @@ const bancoDePreguntas = {
 
             // Modifying a Chart with Data Label Variations
             [
-                "On the 'Inventory' worksheet, modify the chart to display the series values as data labels at the base of each column.",
-                "On the 'Inventory' sheet, adjust the chart to display the series values as data labels at the top of each column.",
+                "On the 'Inventory' worksheet, modify the chart to display the series values as data labels inside base of each column.",
+                "On the 'Inventory' sheet, adjust the chart to display the series values as data labels Outside the end of each column.",
                 "In the 'Inventory' worksheet, change the chart to display the series values as data labels inside the end of each column.",
-                "On the 'Inventory' sheet, modify the chart to show data labels inside the columns instead of at the top.",
+                "On the 'Inventory' sheet, modify the chart to show data labels inside the columns instead of at the end.",
                 "In the 'Inventory' worksheet, update the chart to display the series values as data labels at the center of each column."
             ]
         ]
@@ -114,10 +114,10 @@ const bancoDePreguntas = {
         preguntas: [
             [
                 "On the 'Customer Billing' sheet, change the margins to Wide.",
-                "On the 'Customer Billing' sheet, set the margins to Custom Margins with 0.5-inch for all sides.",
+                "On the 'Customer Billing' sheet, set the margins to Custom Margins with 0.5-inch for all sides include the header and footer",
                 "On the 'Customer Billing' sheet, adjust the margins to Normal.",
                 "On the 'Customer Billing' sheet, set the margins to Custom Margins with 1-inch on top and bottom and 0.75-inch on the sides.",
-                "On the 'Customer Billing' sheet, change the margins to Custom Margins with 0.25-inch on all sides."
+                "On the 'Customer Billing' sheet, change the margins to Custom Margins with 0.25-inch on all sides except the header and footer"
             ],
 
             // Adjusting Page Breaks (No Variants)
@@ -246,8 +246,7 @@ const bancoDePreguntas = {
                 "On the 'Roasting' worksheet, configure the table style options to include Header Row and Total Row.",
                 "On the 'Roasting' worksheet, configure the table style options to highlight the First Column and Last Column.",
                 "On the 'Roasting' worksheet, configure the table style options to display Banded Columns instead of rows.",
-                "On the 'Roasting' worksheet, configure the table style options to hide the Filter Button from the table.",
-                "On the 'Roasting' worksheet, configure the table style options to use a light color scheme for the table style."
+                "On the 'Roasting' worksheet, configure the table style options to hide the Filter Button from the table."
 
             ]
         ]
