@@ -250,6 +250,74 @@ const bancoDePreguntas = {
 
             ]
         ]
+    },
+
+    // Proyecto 6
+    proyecto6: {
+        nombre: "ScoreSummary",
+        archivo: "./projects/P6–ScoreSummary.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "Configure the “Students” sheet so that only cells C3:E18 are printed"
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
+
+            ],
+            // Table Style Options
+            [
+                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
+
+            ]
+        ]
+    },
+    // Proyecto 7
+    proyecto7: {
+        nombre: "CoffeeInventory",
+        archivo: "./projects/P7–Residences.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "In the document properties, add ‘Rent’ as a tag."
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Income’ worksheet, name the range B2:B4 ‘Income’"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the ‘Real Estate’ worksheet, filter the table data to hide all rows with ‘Studio’ in the ‘Type’ column."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Real Estate” worksheet, in the “Rent Increase” column, enter a formula that multiplies the value in the “Monthly Rent” column by cell C25."
+
+            ],
+            [
+                "On the ‘Income’ worksheet, modify the chart to display the legend to the right of the chart."
+
+            ]
+        ]
     }
 };
 
