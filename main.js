@@ -327,7 +327,7 @@ let currentProjectIndex = 0;
 let currentQuestionIndex = 0;
 let selectedVariants = [];
 let timer;
-let secondsRemaining = 50 * 60;
+let secondsRemaining = 500 * 60;
 
 // Función para seleccionar y guardar una variante aleatoria por pregunta
 function selectRandomVariants(project) {
@@ -415,7 +415,6 @@ function startTimer() {
         if (secondsRemaining <= 0) {
             clearInterval(timer);
             alert("Time is up! The project will be submitted.");
-            submitProject();
         }
     }, 1000);
 }
