@@ -327,7 +327,7 @@ let currentProjectIndex = 0;
 let currentQuestionIndex = 0;
 let selectedVariants = [];
 let timer;
-let secondsRemaining = 500 * 60;
+let secondsRemaining = 50 * 60;
 
 // Función para seleccionar y guardar una variante aleatoria por pregunta
 function selectRandomVariants(project) {
@@ -447,12 +447,6 @@ function submitProject() {
         currentProjectIndex = 0; // Volver al primer proyecto si se termina la lista
     }
 
-    // Reiniciar el estado para el siguiente proyecto
-    currentQuestionIndex = 0;
-    secondsRemaining = 50 * 60;
-    selectRandomVariants(projectKey); // Seleccionar nuevas variantes
-    loadProjectQuestions(); // Cargar las preguntas del nuevo proyecto
-    startTimer(); // Reiniciar el temporizador
 }
 
 // Función para detener el temporizador
