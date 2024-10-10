@@ -319,7 +319,7 @@ function startTimer() {
         if (secondsRemaining <= 0) {
             clearInterval(timer);
             alert("Time is up! The project will be submitted.");
-            submitProject();
+
         }
     }, 1000);
 }
@@ -354,10 +354,9 @@ function submitProject() {
 
     // Reiniciar el estado para el siguiente proyecto
     currentQuestionIndex = 0;
-    secondsRemaining = 50 * 60;
     selectRandomVariants(projectKey); // Seleccionar nuevas variantes
     loadProjectQuestions(); // Cargar las preguntas del nuevo proyecto
-    startTimer(); // Reiniciar el temporizador
+
 }
 
 // Función para detener el temporizador
