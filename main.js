@@ -95,7 +95,7 @@ const bancoDePreguntas = {
                 'On the "Inventory" worksheet, add only column G to the "Year End Inventory" table so that "Total Value" becomes the header of a new table column.'
             ],
             [
-                'On the "Inventory" worksheet, in cell F46, use a function to display the largest value from the "Unit Price" column of the "Year End Inventory" table.'
+                'On the "Inventory" worksheet, in cell F26, use a function to display the largest value from the "Unit Price" column of the "Year End Inventory" table.'
             ],
             [
                 'On the "Comparison" worksheet, using the "Regional Price Comparison" data, create a *3-D Pie* chart that displays the "Total Value" data for each "Region". Display the regions as the legend. Display the title "Total Value". The exact size and position of the chart do not matter.'
