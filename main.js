@@ -252,6 +252,66 @@ const bancoDePreguntas = {
             ]
         ]
     },
+    proyecto1: {
+        nombre: "Product List",
+        archivo: "./projects/P1-ProductList.xlsx",
+        preguntas: [
+
+            [
+                "In the'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll."
+            ],
+            [
+                "On the “Products” worksheet, in the “Quantity” column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values. 🚦"
+            ],
+            [
+                "On the ‘Products’ worksheet, apply the White, Table Style Medium 1 style to the table."
+            ],
+            [
+                "On the “Products” worksheet, in the “Projected Value” column, enter a formula that multiplies the value in the “Current Value” column by the “Increase” named range. Use the column name and range name in the formula instead of cell references or values.",
+            ],
+            [
+                "On the “Summary” worksheet, apply the Colorful Palette 2 color to the chart.",
+            ]
+        ]
+
+
+
+    },
+    proyecto3: {
+        nombre: "Clients",
+        archivo: "./projects/P3-Clients.xlsx",
+        preguntas: [
+            [
+                "On the “Customer Billing” sheet, change the margins to Narrow"
+            ],
+
+            // Adjusting Page Breaks (No Variants)
+            [
+                "On the “Consultants” worksheet, adjust the page breaks so that the worksheet prints on two pages. Cells A1:D23 should print on the first page, and the entire chart should print on the second page."
+            ],
+
+            // Variants of Using the RANDBETWEEN Function for Random Number Generation
+            [
+                "3.	On the “New Clients” worksheet, in cells C4:C13, use the “RANDBETWEEN” function to generate a random “Consultant ID” number from 1 to 10 in each cell."
+            ],
+
+            // Variants of Applying Styles to Cell A1 on the "New Clients" Worksheet
+            [
+                "4.	On the ‘New Clients’ worksheet, apply the Title style to cell A1"
+            ],
+
+            // Variants of Sorting Clients in Ascending or Descending Order
+            [
+                "On the ‘New Clients’ worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in ascending order."
+            ],
+
+            // Variants of Adding Alt Text to the Chart on the "Consultants" Worksheet
+            [
+                "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
+            ]
+        ]
+    },
+
 };
 
 
