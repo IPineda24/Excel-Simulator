@@ -252,7 +252,7 @@ const bancoDePreguntas = {
             ]
         ]
     },
-    proyecto1: {
+    proyecto10: {
         nombre: "Product List",
         archivo: "./projects/P1-ProductList.xlsx",
         preguntas: [
@@ -274,10 +274,8 @@ const bancoDePreguntas = {
             ]
         ]
 
-
-
     },
-    proyecto3: {
+    proyecto11: {
         nombre: "Clients",
         archivo: "./projects/P3-Clients.xlsx",
         preguntas: [
@@ -310,7 +308,7 @@ const bancoDePreguntas = {
                 "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
             ]
         ]
-    },
+    }
 
 };
 
