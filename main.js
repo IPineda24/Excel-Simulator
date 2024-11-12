@@ -308,6 +308,39 @@ const bancoDePreguntas = {
                 "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
             ]
         ]
+    },
+    // Proyecto 7
+    proyecto12: {
+        nombre: "Residences",
+        archivo: "./projects/P7–Residences.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "In the document properties, add ‘Rent’ as a tag."
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Income’ worksheet, name the range B2:B4 ‘Income’"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the ‘Real Estate’ worksheet, filter the table data to hide all rows with ‘Studio’ in the ‘Type’ column."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Real Estate” worksheet, in the “Rent Increase” column, enter a formula that multiplies the value in the “Monthly Rent” column by cell C25."
+
+            ],
+            [
+                "On the ‘Income’ worksheet, modify the chart to display the legend to the right of the chart."
+
+            ]
+        ]
     }
 
 };
@@ -352,7 +385,7 @@ let currentProjectIndex = 0;
 let currentQuestionIndex = 0;
 let selectedVariants = [];
 let timer;
-let secondsRemaining = 115 * 60;
+let secondsRemaining = 130 * 60;
 
 // Función para seleccionar y guardar una variante aleatoria por pregunta
 function selectRandomVariants(project) {
@@ -440,7 +473,7 @@ function startTimer() {
         if (secondsRemaining <= 0) {
             clearInterval(timer);
             alert("Time is up! The project will be submitted.");
-            submitProject();
+
         }
     }, 1000);
 }
@@ -475,10 +508,8 @@ function submitProject() {
 
     // Reiniciar el estado para el siguiente proyecto
     currentQuestionIndex = 0;
-    secondsRemaining = 50 * 60;
     selectRandomVariants(projectKey); // Seleccionar nuevas variantes
     loadProjectQuestions(); // Cargar las preguntas del nuevo proyecto
-    startTimer(); // Reiniciar el temporizador
 }
 
 // Función para detener el temporizador
