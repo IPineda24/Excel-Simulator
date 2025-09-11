@@ -22,7 +22,7 @@ const bancoDePreguntas = {
             ],
             [
                 "On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
-                "On the 'Products' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
+                "On the 'Products' worksheet, apply the Blue, Table Style Light 9 style to the table.",
                 "On the 'Products' worksheet, apply the Orange, Table Style Medium 3 style to the table.",
                 "On the 'Products' worksheet, apply the Light Green, Table Style Medium 7 style to the table.",
                 "On the 'Products' worksheet, apply the Dark Gray, Table Style Dark 1 style to the table."
