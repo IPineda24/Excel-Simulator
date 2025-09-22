@@ -185,11 +185,11 @@ const bancoDePreguntas = {
             // Conditional Function Using Volunteer Data
             [
                 "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Silver” for volunteers with 5 to 9 years of service. Otherwise, leave the “Award Type” blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Platinum” for each volunteer with more than 15 years of service. If less, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Bronze” for volunteers with 1 to 4 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Silver” for volunteers with 9 years of service. Otherwise, leave the “Award Type” blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Platinum” for each volunteer with more than 6 years of service. If less, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Bronze” for volunteers with 4 years of service. Otherwise, leave the cell blank.",
                 "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Recognition” for each volunteer with at least 8 years of service. Otherwise, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for volunteers with more than 12 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for volunteers with more than 10 years of service. Otherwise, leave the cell blank.",
                 "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Distinction” for volunteers with over 20 years of service. If less, leave the cell blank."
             ],
 
