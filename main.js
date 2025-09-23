@@ -53,11 +53,8 @@ const bancoDePreguntas = {
         preguntas: [
             // Importing Data and Formatting as a Table
             [
-                "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Ensure the table does not use the first row of the data source as headers, but as data.",
-                "On the 'Out of Print' worksheet, starting from cell A3, import data from the 'OutOfPrint' text file in the Documents folder, and format the first row as data, not headers.",
-                "In the 'Out of Print' worksheet, import data from the 'OutOfPrint' text file starting at cell A4. Use the first row as data, not headers.",
-                "On the 'Out of Print' sheet, import data from the 'OutOfPrint' text file located in Documents, starting at cell B3. Ensure the first row is included as data.",
-                "On the 'Out of Print' sheet, starting at cell A3, import data from the 'OutOfStock' text file in Documents, making sure the first row is part of the data, not headers."
+                "On the 'Out of Print' worksheet, starting at cell A3, import data from the 'OutOfPrint' text file located in the Documents folder. Ensure the table does use the first row of the data source as headers",
+
             ],
 
             // Setting Horizontal Text Alignment Variations
@@ -89,11 +86,7 @@ const bancoDePreguntas = {
 
             // Creating a 3D Chart with Variations in Chart Type
             [
-                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', create a 3D Clustered Bar  Chart that shows the 'Total Value' data for each 'Region'. Display the regions as a legend and add the title 'Total Value'.",
-                "On the 'Comparison' worksheet, using the data from 'Price Comparison by Regions', generate a 3D Column Chart for the 'Total Value' of each region, displaying the regions in the legend and the title 'Total Value'.",
                 "In the 'Comparison' worksheet, create a 3D Pie Chart using the 'Total Value' data from 'Price Comparison by Regions'. Show the regions as a legend and add the title 'Total Value'.",
-                "On the 'Comparison' worksheet, generate a 3D Area Chart displaying the 'Total Value' data for each 'Region' from 'Price Comparison by Regions'. Show the regions in the legend with the title 'Total Value'.",
-                "In the 'Comparison' worksheet, create a 3D Doughnut Chart using the 'Total Value' data for each region from 'Price Comparison by Regions', with a legend for the regions and the title 'Total Value'."
             ],
 
             // Modifying a Chart with Data Label Variations
