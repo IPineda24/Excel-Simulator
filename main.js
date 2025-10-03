@@ -1,51 +1,49 @@
 window.location.href = "./projects/P1-ProductList.xlsx";
 // Banco de preguntas
 const bancoDePreguntas = {
-    proyecto1: {
-        nombre: "Product List",
-        archivo: "./projects/P1-ProductList.xlsx",
+    // Proyecto 4 
+    proyecto4: {
+        nombre: "VolunteerRoster",
+        archivo: "./projects/P4–VolunteerRoster.xlsx",
         preguntas: [
+            [
+                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
+            ],
 
+            // Insert a Note or Comment
             [
-                "In the 'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll.",
-                "In the 'Products' spreadsheet, freeze rows 1, 2, and 3 so that the title and column headers remain visible as you scroll.",
-                "In the 'Products' spreadsheet, freeze row 1 so that the title remains visible as you scroll.",
-                "In the 'Products' spreadsheet, freeze rows 1, 2, 3, and 4 so that the title and column headers remain visible as you scroll.",
-                "In the 'Products' spreadsheet, freeze rows 1 to 3 so that the title and column headers remain visible as you scroll."
+                "On the 'Roster' worksheet, in cell G6, insert a New Comment with the text “Requires 5 years of experience”.",
+                "On the 'Roster' worksheet, in cell F3, insert a New Note with the text “Eligible for extra training”.",
+                "On the 'Roster' worksheet, in cell H5, insert a Comment with the text “Awarded volunteer of the year”.",
+                "On the 'Roster' worksheet, in cell D7, insert a New Note with the text “Currently on probation period”.",
+                "On the 'Roster' worksheet, in cell C9, insert a Comment with the text “Completed 15+ years of service”."
+
             ],
+
+            // Conditional Function Using Volunteer Data
             [
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Arrows (Colored) format to the values.",
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Red Data Bars (Gradient Fill) format to the values.",
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Flags format to the values.",
-                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Color Scale (Red-Yellow-Green) format to the values."
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Silver” for volunteers with 9 years of service. Otherwise, leave the “Award Type” blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Platinum” for each volunteer with more than 6 years of service. If less, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Bronze” for volunteers with 4 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Recognition” for each volunteer with at least 8 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for volunteers with more than 10 years of service. Otherwise, leave the cell blank.",
+                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Distinction” for volunteers with over 20 years of service. If less, leave the cell blank."
             ],
+
+            // Formula for Display Name Format (Last Name, First Name)
             [
-                "On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
-                "On the 'Products' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
-                "On the 'Products' worksheet, apply the Orange, Table Style Medium 3 style to the table.",
-                "On the 'Products' worksheet, apply the Light Green, Table Style Light 14 style to the table.",
-                "On the 'Products' worksheet, apply the Dark Gray, Table Style Dark 4 style to the table."
-            ],
-            [
-                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range.",
-                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that adds the value in the 'Current Value' column to the 'Increase' named range.",
-                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that subtracts the value in the 'Current Value' column from the 'Increase' named range.",
-                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that divides the value in the 'Current Value' column by the 'Increase' named range.",
-                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range."
-            ],
-            [
-                "On the 'Summary' worksheet, apply the Colorful Palette 2 color to the chart.",
-                "On the 'Summary' worksheet, apply the Colorful Palette 3 to the chart.",
-                "On the 'Summary' worksheet, apply the Monochromatic Palette 1 to the chart.",
-                "On the 'Summary' worksheet, apply the Colorful Palette 4 to the chart.",
-                "On the 'Summary' worksheet, apply the Colorful Palette 1 to the chart."
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name Last Name format. For example: Adam Barr.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name - First Name format, separated by a hyphen. For example: Barr - Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names separated by a space. For example: Barr Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name-Last Name format, separated by a hyphen. For example: Adam-Barr.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name followed by the First Name separated by two spaces. For example: Barr Adam.",
+                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the full name with the first name in parentheses. For example: Barr (Adam)."
             ]
         ]
-
-
-
     },
+
     // Proyecto 2 
     proyecto2: {
         nombre: "Book Publishing",
@@ -96,6 +94,41 @@ const bancoDePreguntas = {
                 "In the 'Inventory' worksheet, change the chart to display the series values as data labels inside the end of each column.",
                 "On the 'Inventory' sheet, modify the chart to show data labels inside the columns instead of at the end.",
                 "In the 'Inventory' worksheet, update the chart to display the series values as data labels at the center of each column."
+            ]
+        ]
+    },
+
+    // Proyecto 6
+    proyecto6: {
+        nombre: "ScoreSummary",
+        archivo: "./projects/P6–ScoreSummary.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "Configure the “Students” sheet so that only cells C3:E18 are printed"
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
+
+            ],
+            // Table Style Options
+            [
+                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
+
             ]
         ]
     },
@@ -156,48 +189,52 @@ const bancoDePreguntas = {
         ]
     },
 
-    // Proyecto 4 
-    proyecto4: {
-        nombre: "VolunteerRoster",
-        archivo: "./projects/P4–VolunteerRoster.xlsx",
+    proyecto1: {
+        nombre: "Product List",
+        archivo: "./projects/P1-ProductList.xlsx",
         preguntas: [
+
             [
-                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
+                "In the 'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll.",
+                "In the 'Products' spreadsheet, freeze rows 1, 2, and 3 so that the title and column headers remain visible as you scroll.",
+                "In the 'Products' spreadsheet, freeze row 1 so that the title remains visible as you scroll.",
+                "In the 'Products' spreadsheet, freeze rows 1, 2, 3, and 4 so that the title and column headers remain visible as you scroll.",
+                "In the 'Products' spreadsheet, freeze rows 1 to 3 so that the title and column headers remain visible as you scroll."
             ],
-
-            // Insert a Note or Comment
             [
-                "On the 'Roster' worksheet, in cell G6, insert a New Comment with the text “Requires 5 years of experience”.",
-                "On the 'Roster' worksheet, in cell F3, insert a New Note with the text “Eligible for extra training”.",
-                "On the 'Roster' worksheet, in cell H5, insert a Comment with the text “Awarded volunteer of the year”.",
-                "On the 'Roster' worksheet, in cell D7, insert a New Note with the text “Currently on probation period”.",
-                "On the 'Roster' worksheet, in cell C9, insert a Comment with the text “Completed 15+ years of service”."
-
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values.",
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Arrows (Colored) format to the values.",
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Red Data Bars (Gradient Fill) format to the values.",
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the 3 Flags format to the values.",
+                "On the 'Products' worksheet, in the 'Quantity' column, use conditional formatting to apply the Color Scale (Red-Yellow-Green) format to the values."
             ],
-
-            // Conditional Function Using Volunteer Data
             [
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Silver” for volunteers with 9 years of service. Otherwise, leave the “Award Type” blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Platinum” for each volunteer with more than 6 years of service. If less, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Bronze” for volunteers with 4 years of service. Otherwise, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Recognition” for each volunteer with at least 8 years of service. Otherwise, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Gold” for volunteers with more than 10 years of service. Otherwise, leave the cell blank.",
-                "On the ‘Roster’ worksheet, in the ‘Award Type’ column, use a function to display “Distinction” for volunteers with over 20 years of service. If less, leave the cell blank."
+                "On the 'Products' worksheet, apply the White, Table Style Medium 1 style to the table.",
+                "On the 'Products' worksheet, apply the Light Blue, Table Style Light 9 style to the table.",
+                "On the 'Products' worksheet, apply the Orange, Table Style Medium 3 style to the table.",
+                "On the 'Products' worksheet, apply the Light Green, Table Style Light 14 style to the table.",
+                "On the 'Products' worksheet, apply the Dark Gray, Table Style Dark 4 style to the table."
             ],
-
-            // Formula for Display Name Format (Last Name, First Name)
             [
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name Last Name format. For example: Adam Barr.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name - First Name format, separated by a hyphen. For example: Barr - Adam.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names separated by a space. For example: Barr Adam.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the First Name-Last Name format, separated by a hyphen. For example: Adam-Barr.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the volunteers’ names in the Last Name followed by the First Name separated by two spaces. For example: Barr Adam.",
-                "On the ‘Roster’ worksheet, in the ‘Display Name’ column, enter a formula to display the full name with the first name in parentheses. For example: Barr (Adam)."
+                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range.",
+                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that adds the value in the 'Current Value' column to the 'Increase' named range.",
+                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that subtracts the value in the 'Current Value' column from the 'Increase' named range.",
+                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that divides the value in the 'Current Value' column by the 'Increase' named range.",
+                "On the 'Products' worksheet, in the 'Projected Value' column, enter a formula that multiplies the value in the 'Current Value' column by the 'Increase' named range."
+            ],
+            [
+                "On the 'Summary' worksheet, apply the Colorful Palette 2 color to the chart.",
+                "On the 'Summary' worksheet, apply the Colorful Palette 3 to the chart.",
+                "On the 'Summary' worksheet, apply the Monochromatic Palette 1 to the chart.",
+                "On the 'Summary' worksheet, apply the Colorful Palette 4 to the chart.",
+                "On the 'Summary' worksheet, apply the Colorful Palette 1 to the chart."
             ]
         ]
+
+
+
     },
+
 
     // Proyecto 5
     proyecto5: {
@@ -216,8 +253,6 @@ const bancoDePreguntas = {
                 "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Column widths from the source worksheet.",
                 "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Source Formatting.",
                 "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, but paste Values Only.",
-                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, Transpose the rows and columns.",
-                "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells as a Linked Picture.",
                 "On the 'Inventory' worksheet, copy cells A1:D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells as Formulas Only."
 
             ],
@@ -238,47 +273,13 @@ const bancoDePreguntas = {
                 "On the 'Roasting' worksheet, configure the table style options to automatically shade every other table row.",
                 "On the 'Roasting' worksheet, configure the table style options to include Header Row and Total Row.",
                 "On the 'Roasting' worksheet, configure the table style options to highlight the First Column and Last Column.",
-                "On the 'Roasting' worksheet, configure the table style options to display Banded Columns instead of rows.",
-                "On the 'Roasting' worksheet, configure the table style options to hide the Filter Button from the table."
+                "On the 'Roasting' worksheet, configure the table style options to display Banded Columns",
+                "On the 'Roasting' worksheet, configure the table style options to show the Filter Button from the table."
 
             ]
         ]
     },
 
-    // Proyecto 6
-    proyecto6: {
-        nombre: "ScoreSummary",
-        archivo: "./projects/P6–ScoreSummary.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "Configure the “Students” sheet so that only cells C3:E18 are printed"
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
-
-            ],
-
-            // Table Style Options
-            [
-                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
-
-            ],
-            // Table Style Options
-            [
-                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
-
-            ]
-        ]
-    },
     // Proyecto 7
     proyecto7: {
         nombre: "CoffeeInventory",
