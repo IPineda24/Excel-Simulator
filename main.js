@@ -345,7 +345,7 @@ const bancoDePreguntas = {
 
 // Estado de la aplicación
 const state = {
-    projectKeys: Object.keys(bancoDePreguntas),
+    projectKeys: [],
     currentProjectIndex: 0,
     currentQuestionIndex: 0,
     selectedVariants: [],
@@ -360,6 +360,19 @@ const utils = {
         const min = Math.floor(seconds / 60);
         const sec = seconds % 60;
         return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    },
+
+    shuffleArray(array) {
+        const shuffled = [...array];
+        for (let i = shuffled.length - 1; i > 0; i--) {
+            const j = Math.floor(Math.random() * (i + 1));
+            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
+        }
+        return shuffled;
+    },
+
+    initializeProjectOrder() {
+        state.projectKeys = this.shuffleArray(Object.keys(bancoDePreguntas));
     },
 
     selectRandomVariants(projectKey) {
@@ -554,6 +567,7 @@ const projects = {
         state.secondsRemaining = 80 * 60;
         state.questionStates = {};
 
+        utils.initializeProjectOrder();
         const firstProjectKey = state.projectKeys[0];
         utils.selectRandomVariants(firstProjectKey);
         this.load();
@@ -595,6 +609,7 @@ document.getElementById("submit-project").onclick = () => {
 document.getElementById("reset-btn").onclick = () => projects.reset();
 
 // Inicialización
+utils.initializeProjectOrder();
 utils.selectRandomVariants(state.projectKeys[state.currentProjectIndex]);
 projects.load();
 timer.start();
