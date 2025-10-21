@@ -1,49 +1,49 @@
-window.location.href = "./projects/JobReport.xlsx";
-
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {
         nombre: "JobReport",
         archivo: "./projects/JobReport.xlsx",
         preguntas: [
-
             [
-                "On the *Last Quarter* worksheet, freeze row 1 so it remains visible while scrolling."
+                "On the *Last Quarter* worksheet, freeze row 1 so it remains visible while scrolling.",
+                "On the *Last Quarter* worksheet, freeze row 1 and 2 so it remains visible while scrolling."
             ],
             [
-                "On the *Last Quarter* worksheet, in cell A3, apply the *Strikethrough* font effect to the name *Danner, Ryan*."
+                "On the *Last Quarter* worksheet, in cell A3, apply the *Strikethrough* font effect to the name *Danner, Ryan*.",
+                "On the *Last Quarter* worksheet, in cell A11, apply the *Superscript* font effect to the name *Harper, Morgan*."
             ],
             [
-                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 5'."
+                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 5'.",
+                "On the 'Summary' worksheet, in the 'Trend' column, insert *Column* sparklines to show the trends from 'Year 1' through 'Year 5'.",
+                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 4'."
             ],
             [
                 "On the 'Last Quarter' worksheet, in column F, beginning in cell F2, use a function to display each 'Job Title' from the table without retrieving duplicate entries."
             ],
             [
-                "On the 'Job Openings' worksheet, modify the chart to display the Primary Vertical axis title. Enter the title 'Jobs'."
+                "On the 'Job Openings' worksheet, modify the chart to display the Primary Vertical axis title. Enter the title 'Jobs'.",
+                "On the 'Job Openings' worksheet, modify the chart to display the Primary Horizontal axis title. Enter the title 'Works'."
             ]
         ]
-
-
-
     },
-
-    // Proyecto 4 
     proyecto4: {
         nombre: "Attendance",
         archivo: "./projects/Attendance.xlsx",
         preguntas: [
             [
-                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] of [N]*, where *[P]* is the *Page Number* and *[N]* is the *Number of Pages*.'
+                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] of [N]*, where *[P]* is the *Page Number* and *[N]* is the *Number of Pages*.',
+                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] - [N]*, where *[P]* is the *Number of Pages*  and *[N]* is the *Page Number*.'
             ],
             [
                 'On the "Score Summary" worksheet, display the formulas instead of the values.'
             ],
             [
-                'On the "Attendance" worksheet, configure rows 1 through 4 to repeat on all printed pages.'
+                'On the "Attendance" worksheet, configure rows 1 through 4 to repeat on all printed pages.',
+                'On the "Attendance" worksheet, configure rows 4 through 8 to repeat on all printed pages.'
             ],
             [
-                'On the "Attendance" worksheet, delete the rows that have "Elective" in the "Class" column.'
+                'On the "Attendance" worksheet, delete the rows that have "Elective" in the "Class" column.',
+                'On the "Attendance" worksheet, delete the rows that have "History" in the "Class" column.'
             ],
             [
                 'On the "Scores" worksheet, unmerge cell A1.'
@@ -53,19 +53,17 @@ const bancoDePreguntas = {
             ]
         ]
     },
-
-
-
-    // Proyecto 6
     proyecto6: {
         nombre: "AccountBalances",
         archivo: "./projects/AccountBalances.xlsx",
         preguntas: [
             [
-                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$16,000".'
+                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$16,000".',
+                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$60,000".'
             ],
             [
-                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays negative numbers with a negative sign.'
+                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays negative numbers with a negative sign.',
+                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays positive numbers with a red positive sign and parentheses. for example (1,234.10)'
             ],
             [
                 'On the "Summary" worksheet, apply the *Accounting* number format to cells B4:E12. Display the numbers with only two decimal places.'
@@ -76,11 +74,8 @@ const bancoDePreguntas = {
             [
                 'On the "Health & Research" worksheet, configure the table style option to automatically emphasize the first column of the table.'
             ]
-
-
         ]
     },
-    // Proyecto 3 
     proyecto3: {
         nombre: "BookPublishing",
         archivo: "./projects/BookPublishing.xlsx",
@@ -105,7 +100,6 @@ const bancoDePreguntas = {
             ]
         ]
     },
-    // Proyecto 5
     proyecto5: {
         nombre: "FitnessEquipment",
         archivo: "./projects/FitnessEquipment.xlsx",
@@ -128,11 +122,8 @@ const bancoDePreguntas = {
             [
                 'On the "Sales" worksheet, change the elements displayed on the chart by changing the chart layout to *Layout 3*.'
             ]
-
         ]
     },
-
-    // Proyecto 2 
     proyecto2: {
         nombre: "StudentsGrades",
         archivo: "./projects/StudentsGrades.xlsx",
@@ -141,7 +132,8 @@ const bancoDePreguntas = {
                 'You are analyzing grade and attendance data for a math class. In the document properties, add "Math 101" as a tag.'
             ],
             [
-                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 15 minutes from 8:00 AM.'
+                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 15 minutes from 8:00 AM.',
+                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 45 minutes from 8:00 AM.'
             ],
             [
                 'On the "Grades" worksheet, in the "Attendance" column, use conditional formatting to apply the *Green Fill with Dark Green Text* format to cells that contain values greater than "97".'
@@ -158,197 +150,232 @@ const bancoDePreguntas = {
             [
                 'On the "Attendance Analysis" worksheet, add the alt text description "Attendance chart" to the chart.'
             ]
-
-        ]
-    },
-
-    proyecto5P1: {
-        nombre: "CoffeeInventory",
-        archivo: "./projects/CoffeeInventory05.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to 'http://fourthcoffee.com'. Display the text 'More information' in the cell."
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the 'Inventory' worksheet copy cells A1: D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Column widths from the source worksheet."
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the 'Inventory' worksheet, apply the Currency number format to cells D4: D33. Display the numbers with only two decimal places"
-
-            ],
-
-            // Table Style Options
-            [
-                "On the 'Roasting' worksheet, configure the table style options to automatically shade every other table row."
-
-            ]
-        ]
-    },
-
-    // Proyecto 4 
-    proyecto4P1: {
-        nombre: "VolunteerRoster",
-        archivo: "./projects/VolunteerRoster04.xlsx",
-        preguntas: [
-            [
-                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
-            ],
-
-            // Insert a Note or Comment
-            [
-                "On the ‘Roster’ worksheet, in cell E4, insert a New Note with the text “Bonus for 10+ years”."
-
-            ],
-
-            // Conditional Function Using Volunteer Data
-            [
-                "On the “Roster” worksheet, in the “Award Type” column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank."
-            ],
-
-            // Formula for Display Name Format (Last Name, First Name)
-            [
-                "On the “Roster” worksheet, in the “Display Name” column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam"
-            ]
-        ]
-    },
-
-    // Proyecto 6
-    proyecto6P1: {
-        nombre: "ScoreSummary",
-        archivo: "./projects/ScoreSummary06.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "Configure the “Students” sheet so that only cells C3:E18 are printed"
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
-
-            ],
-
-            // Table Style Options
-            [
-                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
-
-            ],
-            // Table Style Options
-            [
-                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
-
-            ]
-        ]
-    },
-    proyecto10: {
-        nombre: "Product List",
-        archivo: "./projects/P1-ProductList.xlsx",
-        preguntas: [
-
-            [
-                "In the'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll."
-            ],
-            [
-                "On the “Products” worksheet, in the “Quantity” column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values. 🚦"
-            ],
-            [
-                "On the ‘Products’ worksheet, apply the White, Table Style Medium 1 style to the table."
-            ],
-            [
-                "On the “Products” worksheet, in the “Projected Value” column, enter a formula that multiplies the value in the “Current Value” column by the “Increase” named range. Use the column name and range name in the formula instead of cell references or values.",
-            ],
-            [
-                "On the “Summary” worksheet, apply the Colorful Palette 2 color to the chart.",
-            ]
-        ]
-
-    },
-    proyecto11: {
-        nombre: "Clients",
-        archivo: "./projects/P3-Clients.xlsx",
-        preguntas: [
-            [
-                "On the “Customer Billing” sheet, change the margins to Narrow"
-            ],
-
-            // Adjusting Page Breaks (No Variants)
-            [
-                "On the “Consultants” worksheet, adjust the page breaks so that the worksheet prints on two pages. Cells A1:D23 should print on the first page, and the entire chart should print on the second page."
-            ],
-
-            // Variants of Using the RANDBETWEEN Function for Random Number Generation
-            [
-                "3.	On the “New Clients” worksheet, in cells C4:C13, use the “RANDBETWEEN” function to generate a random “Consultant ID” number from 1 to 10 in each cell."
-            ],
-
-            // Variants of Applying Styles to Cell A1 on the "New Clients" Worksheet
-            [
-                "4.	On the ‘New Clients’ worksheet, apply the Title style to cell A1"
-            ],
-
-            // Variants of Sorting Clients in Ascending or Descending Order
-            [
-                "On the ‘New Clients’ worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in ascending order."
-            ],
-
-            // Variants of Adding Alt Text to the Chart on the "Consultants" Worksheet
-            [
-                "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
-            ]
-        ]
-    },
-    // Proyecto 7
-    proyecto12: {
-        nombre: "Residences",
-        archivo: "./projects/P7–Residences.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "In the document properties, add ‘Rent’ as a tag."
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the ‘Income’ worksheet, name the range B2:B4 ‘Income’"
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the ‘Real Estate’ worksheet, filter the table data to hide all rows with ‘Studio’ in the ‘Type’ column."
-
-            ],
-
-            // Table Style Options
-            [
-                "On the “Real Estate” worksheet, in the “Rent Increase” column, enter a formula that multiplies the value in the “Monthly Rent” column by cell C25."
-
-            ],
-            [
-                "On the ‘Income’ worksheet, modify the chart to display the legend to the right of the chart."
-
-            ]
         ]
     }
-
 };
 
+// Estado de la aplicación
+const state = {
+    projectKeys: Object.keys(bancoDePreguntas),
+    currentProjectIndex: 0,
+    currentQuestionIndex: 0,
+    selectedVariants: [],
+    timer: null,
+    secondsRemaining: 40 * 60,
+    questionStates: {}
+};
 
+// Utilidades
+const utils = {
+    formatTime(seconds) {
+        const min = Math.floor(seconds / 60);
+        const sec = seconds % 60;
+        return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
+    },
 
+    selectRandomVariants(projectKey) {
+        const { preguntas } = bancoDePreguntas[projectKey];
+        state.selectedVariants = preguntas.map(variants =>
+            variants[Math.floor(Math.random() * variants.length)]
+        );
+    },
+
+    getCurrentProject() {
+        return bancoDePreguntas[state.projectKeys[state.currentProjectIndex]];
+    },
+
+    navigateToProject(projectKey) {
+        window.location.href = bancoDePreguntas[projectKey].archivo;
+    }
+};
+
+// Gestión del timer
+const timer = {
+    start() {
+        state.timer = setInterval(() => {
+            state.secondsRemaining--;
+            this.display();
+
+            if (state.secondsRemaining <= 0) {
+                this.stop();
+                alert("Time is up! The project will be submitted.");
+            }
+        }, 1000);
+    },
+
+    stop() {
+        clearInterval(state.timer);
+    },
+
+    display() {
+        document.getElementById("timer").textContent = utils.formatTime(state.secondsRemaining);
+    }
+};
+
+// Gestión de preguntas
+const questions = {
+    load(index) {
+        document.getElementById("question-text").textContent = state.selectedVariants[index];
+        this.updateNavigationButtons();
+        this.updateActionButtons(index);
+    },
+
+    updateNavigationButtons() {
+        const buttons = document.querySelectorAll(".question-btn");
+
+        buttons.forEach((btn, i) => {
+            btn.classList.remove("active", "completed", "review");
+            const wrapper = btn.parentElement;
+            const icon = wrapper.querySelector('.question-icon');
+
+            if (i === state.currentQuestionIndex) {
+                btn.classList.add("active");
+            }
+
+            const questionState = state.questionStates[i];
+            if (questionState === "completed") {
+                btn.classList.add("completed");
+                icon.textContent = "✅";
+                icon.style.display = "block";
+            } else if (questionState === "review") {
+                btn.classList.add("review");
+                icon.textContent = "🚩";
+                icon.style.display = "block";
+            } else {
+                icon.textContent = "";
+                icon.style.display = "none";
+            }
+        });
+    },
+
+    updateActionButtons(index) {
+        const markCompleteBtn = document.getElementById("markFC");
+        const markReviewBtn = document.getElementById("markFR");
+        const currentState = state.questionStates[index];
+
+        markCompleteBtn.classList.toggle("active-btn", currentState === "completed");
+        markReviewBtn.classList.toggle("active-btn", currentState === "review");
+    },
+
+    navigate(direction) {
+        const project = utils.getCurrentProject();
+        const maxIndex = project.preguntas.length - 1;
+
+        if (direction === 'prev' && state.currentQuestionIndex > 0) {
+            state.currentQuestionIndex--;
+            this.load(state.currentQuestionIndex);
+        } else if (direction === 'next' && state.currentQuestionIndex < maxIndex) {
+            state.currentQuestionIndex++;
+            this.load(state.currentQuestionIndex);
+        }
+    },
+
+    toggleState(newState) {
+        const { currentQuestionIndex } = state;
+        const currentState = state.questionStates[currentQuestionIndex];
+
+        if (currentState === newState) {
+            delete state.questionStates[currentQuestionIndex];
+        } else {
+            state.questionStates[currentQuestionIndex] = newState;
+        }
+
+        this.load(currentQuestionIndex);
+    }
+};
+
+// Gestión de proyectos
+const projects = {
+    load() {
+        const project = utils.getCurrentProject();
+        const totalProjects = state.projectKeys.length;
+
+        state.questionStates = {};
+
+        document.getElementById("project-title").textContent =
+            `Project ${state.currentProjectIndex + 1} of ${totalProjects}: ${project.nombre}`;
+
+        this.renderNavigationBar(project.preguntas.length);
+        questions.load(state.currentQuestionIndex);
+    },
+
+    renderNavigationBar(totalQuestions) {
+        const nav = document.getElementById("navigation-bar");
+        nav.innerHTML = '';
+
+        // Botón anterior
+        const prevBtn = document.createElement('button');
+        prevBtn.textContent = "◄";
+        prevBtn.onclick = () => questions.navigate('prev');
+        nav.appendChild(prevBtn);
+
+        // Botones de preguntas
+        for (let i = 0; i < totalQuestions; i++) {
+            const wrapper = document.createElement('div');
+            wrapper.className = 'question-btn-wrapper';
+
+            const btn = document.createElement('button');
+            btn.className = "question-btn";
+            btn.textContent = i + 1;
+            btn.dataset.questionIndex = i;
+            btn.onclick = () => {
+                state.currentQuestionIndex = i;
+                questions.load(i);
+            };
+
+            if (i === 0) btn.classList.add("active");
+
+            const icon = document.createElement('span');
+            icon.className = 'question-icon';
+
+            wrapper.appendChild(btn);
+            wrapper.appendChild(icon);
+            nav.appendChild(wrapper);
+        }
+
+        // Botón siguiente
+        const nextBtn = document.createElement('button');
+        nextBtn.textContent = "►";
+        nextBtn.onclick = () => questions.navigate('next');
+        nav.appendChild(nextBtn);
+    },
+
+    submit() {
+        const nextIndex = (state.currentProjectIndex + 1) % state.projectKeys.length;
+        const nextProjectKey = state.projectKeys[nextIndex];
+
+        utils.navigateToProject(nextProjectKey);
+
+        state.currentProjectIndex = nextIndex;
+        state.currentQuestionIndex = 0;
+
+        utils.selectRandomVariants(nextProjectKey);
+        this.load();
+    },
+
+    reset() {
+        if (!confirm("¿Estás seguro de que quieres reiniciar? Se perderá todo el progreso actual.")) {
+            return;
+        }
+
+        timer.stop();
+
+        state.currentProjectIndex = 0;
+        state.currentQuestionIndex = 0;
+        state.secondsRemaining = 40 * 60;
+        state.questionStates = {};
+
+        const firstProjectKey = state.projectKeys[0];
+        utils.selectRandomVariants(firstProjectKey);
+        this.load();
+        timer.start();
+
+        utils.navigateToProject(firstProjectKey);
+    }
+};
+
+// Event Listeners
 document.getElementById('downloadBtn').addEventListener('click', () => {
-    // Crear el contenido del archivo
     const fileContent = `Género,           Id. de inventario,            Región,              Id. de autor,           En stock,        Precio unitario
 Misterio,             11222,                    Este,                 76-9160,                   3,                  180
 Romance,              11636,                    Este,                 77-9133,                   12,                 190
@@ -360,170 +387,26 @@ De no ficción,        12702,                    Este,                 81-7230, 
 Misterio,             17473,                    Este,                 32-1822,                   0,                  210
 Romance,              18361,                    Este,                 83-2623,                   2,                  200`;
 
-
-
-    // Crear un Blob con el contenido del archivo
     const blob = new Blob([fileContent], { type: 'text/plain' });
-
-    // Crear un enlace para descargar
     const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob); // Crear una URL para el Blob
-    link.download = 'OutOfPrint.txt'; // Nombre sugerido para el archivo descargado
-
-    // Añadir el enlace al documento y simular clic
+    link.href = URL.createObjectURL(blob);
+    link.download = 'OutOfPrint.txt';
     document.body.appendChild(link);
     link.click();
-
-    // Eliminar el enlace y liberar la URL
     document.body.removeChild(link);
     URL.revokeObjectURL(link.href);
 });
 
-// Control del proyecto y preguntas seleccionadas
-const totalProjects = Object.keys(bancoDePreguntas).length;
-let currentProjectIndex = 0;
-let currentQuestionIndex = 0;
-let selectedVariants = [];
-let timer;
-let secondsRemaining = 130 * 60;
-
-// Función para seleccionar y guardar una variante aleatoria por pregunta
-function selectRandomVariants(project) {
-    const projectData = bancoDePreguntas[project];
-    selectedVariants = projectData.preguntas.map((variants) => {
-        const randomVariant = variants[Math.floor(Math.random() * variants.length)];
-        return randomVariant;
-    });
-}
-
-// Función para cargar preguntas y actualizar la interfaz
-function loadProjectQuestions() {
-    const projectKey = Object.keys(bancoDePreguntas)[currentProjectIndex];
-    const projectData = bancoDePreguntas[projectKey];
-    const totalQuestions = projectData.preguntas.length;
-
-    // Actualizar título del proyecto
-    document.getElementById("project-title").textContent = `Project ${currentProjectIndex + 1} of ${totalProjects}: ${projectData.nombre}`;
-
-    // Actualizar barra de navegación de preguntas
-    const navigationBar = document.getElementById("navigation-bar");
-    navigationBar.innerHTML = ''; // Limpiar botones antiguos
-
-    const prevBtn = document.createElement('button');
-    prevBtn.textContent = "◄";
-    prevBtn.addEventListener("click", goPrevQuestion);
-    navigationBar.appendChild(prevBtn);
-
-    for (let i = 0; i < totalQuestions; i++) {
-        const btn = document.createElement('button');
-        btn.classList.add("question-btn");
-        btn.textContent = (i + 1);
-        btn.addEventListener("click", () => {
-            currentQuestionIndex = i;
-            loadQuestion(currentQuestionIndex);
-        });
-        if (i === 0) btn.classList.add("active");
-        navigationBar.appendChild(btn);
-    }
-
-    const nextBtn = document.createElement('button');
-    nextBtn.textContent = "►";
-    nextBtn.addEventListener("click", goNextQuestion);
-    navigationBar.appendChild(nextBtn);
-
-    // Cargar la primera pregunta
-    loadQuestion(currentQuestionIndex);
-}
-
-// Función para cargar la pregunta almacenada
-function loadQuestion(index) {
-    const projectKey = Object.keys(bancoDePreguntas)[currentProjectIndex];
-    const questionText = selectedVariants[index];
-    document.getElementById("question-text").textContent = questionText;
-
-    // Actualizar la pregunta activa en la barra de navegación
-    const buttons = document.querySelectorAll(".question-btn");
-    buttons.forEach((btn, i) => {
-        btn.classList.toggle("active", i === index);
-    });
-}
-
-// Navegar entre preguntas
-function goPrevQuestion() {
-    if (currentQuestionIndex > 0) {
-        currentQuestionIndex--;
-        loadQuestion(currentQuestionIndex);
-    }
-}
-
-function goNextQuestion() {
-    const projectKey = Object.keys(bancoDePreguntas)[currentProjectIndex];
-    if (currentQuestionIndex < bancoDePreguntas[projectKey].preguntas.length - 1) {
-        currentQuestionIndex++;
-        loadQuestion(currentQuestionIndex);
-    }
-}
-
-// Función para iniciar el temporizador regresivo
-function startTimer() {
-    timer = setInterval(() => {
-        secondsRemaining--;
-        displayTime();
-
-        if (secondsRemaining <= 0) {
-            clearInterval(timer);
-            alert("Time is up! The project will be submitted.");
-
-        }
-    }, 1000);
-}
-
-// Función para mostrar el tiempo en la pantalla
-function displayTime() {
-    const timerElement = document.getElementById("timer");
-    timerElement.textContent = formatTime(secondsRemaining);
-}
-
-// Función para formatear el tiempo en mm:ss
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const remainingSeconds = seconds % 60;
-    return `${minutes.toString().padStart(2, '0')}:${remainingSeconds.toString().padStart(2, '0')}`;
-}
-
-// Función para enviar el proyecto y cambiar al siguiente
-function submitProject() {
-
-    // Obtener la ruta del archivo actual y redirigir
-    const projectKey = Object.keys(bancoDePreguntas)[currentProjectIndex + 1];
-    const archivoProyecto = bancoDePreguntas[projectKey].archivo;
-    window.location.href = archivoProyecto; // Redirigir al archivo del proyecto actual
-
-    // Cambiar al siguiente proyecto si hay más
-    if (currentProjectIndex < totalProjects - 1) {
-        currentProjectIndex++;
-    } else {
-        currentProjectIndex = 0; // Volver al primer proyecto si se termina la lista
-    }
-
-    // Reiniciar el estado para el siguiente proyecto
-    currentQuestionIndex = 0;
-    selectRandomVariants(projectKey); // Seleccionar nuevas variantes
-    loadProjectQuestions(); // Cargar las preguntas del nuevo proyecto
-}
-
-// Función para detener el temporizador
-function stopTimer() {
-    clearInterval(timer);
-}
-
-// Inicializar con el primer proyecto
-selectRandomVariants(Object.keys(bancoDePreguntas)[currentProjectIndex]);
-loadProjectQuestions();
-startTimer(); // Iniciar el temporizador cuando el proyecto cargue
-
-// Enviar el proyecto manualmente al hacer clic en el botón
-document.getElementById("submit-project").addEventListener("click", () => {
+document.getElementById("markFC").onclick = () => questions.toggleState("completed");
+document.getElementById("markFR").onclick = () => questions.toggleState("review");
+document.getElementById("submit-project").onclick = () => {
     alert("Proyecto enviado.");
-    submitProject();
-});
+    projects.submit();
+};
+document.getElementById("reset-btn").onclick = () => projects.reset();
+
+// Inicialización
+utils.selectRandomVariants(state.projectKeys[state.currentProjectIndex]);
+projects.load();
+timer.start();
+utils.navigateToProject(state.projectKeys[0]);

@@ -7,23 +7,38 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="header">
+<div class="header">
+        <div class="header-left">
+            <span class="timer-badge">⏱ <span id="timer">40:00</span></span>
+            <button id="go-summary">Go to Summary</button>
+        </div>
         <h1 id="project-title">Project 1 of 7: Residences</h1>
-        <div class="timer">Time: <span id="timer">50:00</span></div>
+        <div class="header-right">
+            <button id="downloadBtn">Descargar Archivo TXT</button>
+            <button class="icon-btn">☰</button>
+        </div>
+    </div>
+
+    <div class="navigation">
+        <div class="nav-controls">
+            <button id="reset-btn">Reiniciar desde Proyecto 1</button>
+        </div>
+        <div id="navigation-bar"></div>
+        
+        <button id="submit-project">Submit Project</button>
     </div>
 
     <div class="question-section">
         <p id="question-text">Question will appear here</p>
-    </div>
-
-    <div class="navigation">
-         <button id="downloadBtn">Descargar Archivo TXT</button>
-        <div id="navigation-bar"></div>
-        <button id="submit-project">Submit Project</button>
-
+        
+        <div class="action-buttons">
+            <button id="markFC" class="action-btn"><strong>Mark</strong> Complete</button>
+            <button id="markFR" class="action-btn">Mark for Review</button>
+            <button class="action-btn">Mark for Feedback</button>
+        </div>
     </div>
 
     <script src="main.js"></script>
+    
 </body>
 </html>
