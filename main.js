@@ -4,46 +4,44 @@ const bancoDePreguntas = {
         nombre: "JobReport",
         archivo: "./projects/JobReport.xlsx",
         preguntas: [
+
             [
-                "On the *Last Quarter* worksheet, freeze row 1 so it remains visible while scrolling.",
-                "On the *Last Quarter* worksheet, freeze row 1 and 2 so it remains visible while scrolling."
+                "On the *Last Quarter* worksheet, freeze row 1 so it remains visible while scrolling."
             ],
             [
-                "On the *Last Quarter* worksheet, in cell A3, apply the *Strikethrough* font effect to the name *Danner, Ryan*.",
-                "On the *Last Quarter* worksheet, in cell A11, apply the *Superscript* font effect to the name *Harper, Morgan*."
+                "On the *Last Quarter* worksheet, in cell A3, apply the *Strikethrough* font effect to the name *Danner, Ryan*."
             ],
             [
-                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 5'.",
-                "On the 'Summary' worksheet, in the 'Trend' column, insert *Column* sparklines to show the trends from 'Year 1' through 'Year 5'.",
-                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 4'."
+                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 5'."
             ],
             [
                 "On the 'Last Quarter' worksheet, in column F, beginning in cell F2, use a function to display each 'Job Title' from the table without retrieving duplicate entries."
             ],
             [
-                "On the 'Job Openings' worksheet, modify the chart to display the Primary Vertical axis title. Enter the title 'Jobs'.",
-                "On the 'Job Openings' worksheet, modify the chart to display the Primary Horizontal axis title. Enter the title 'Works'."
+                "On the 'Job Openings' worksheet, modify the chart to display the Primary Vertical axis title. Enter the title 'Jobs'."
             ]
         ]
+
+
+
     },
+
+    // Proyecto 4 
     proyecto4: {
         nombre: "Attendance",
         archivo: "./projects/Attendance.xlsx",
         preguntas: [
             [
-                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] of [N]*, where *[P]* is the *Page Number* and *[N]* is the *Number of Pages*.',
-                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] - [N]*, where *[P]* is the *Number of Pages*  and *[N]* is the *Page Number*.'
+                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] of [N]*, where *[P]* is the *Page Number* and *[N]* is the *Number of Pages*.'
             ],
             [
                 'On the "Score Summary" worksheet, display the formulas instead of the values.'
             ],
             [
-                'On the "Attendance" worksheet, configure rows 1 through 4 to repeat on all printed pages.',
-                'On the "Attendance" worksheet, configure rows 4 through 8 to repeat on all printed pages.'
+                'On the "Attendance" worksheet, configure rows 1 through 4 to repeat on all printed pages.'
             ],
             [
-                'On the "Attendance" worksheet, delete the rows that have "Elective" in the "Class" column.',
-                'On the "Attendance" worksheet, delete the rows that have "History" in the "Class" column.'
+                'On the "Attendance" worksheet, delete the rows that have "Elective" in the "Class" column.'
             ],
             [
                 'On the "Scores" worksheet, unmerge cell A1.'
@@ -53,17 +51,19 @@ const bancoDePreguntas = {
             ]
         ]
     },
+
+
+
+    // Proyecto 6
     proyecto6: {
         nombre: "AccountBalances",
         archivo: "./projects/AccountBalances.xlsx",
         preguntas: [
             [
-                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$16,000".',
-                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$60,000".'
+                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$16,000".'
             ],
             [
-                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays negative numbers with a negative sign.',
-                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays positive numbers with a red positive sign and parentheses. for example (1,234.10)'
+                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays negative numbers with a negative sign.'
             ],
             [
                 'On the "Summary" worksheet, apply the *Accounting* number format to cells B4:E12. Display the numbers with only two decimal places.'
@@ -74,8 +74,11 @@ const bancoDePreguntas = {
             [
                 'On the "Health & Research" worksheet, configure the table style option to automatically emphasize the first column of the table.'
             ]
+
+
         ]
     },
+    // Proyecto 3 
     proyecto3: {
         nombre: "BookPublishing",
         archivo: "./projects/BookPublishing.xlsx",
@@ -100,6 +103,7 @@ const bancoDePreguntas = {
             ]
         ]
     },
+    // Proyecto 5
     proyecto5: {
         nombre: "FitnessEquipment",
         archivo: "./projects/FitnessEquipment.xlsx",
@@ -122,8 +126,11 @@ const bancoDePreguntas = {
             [
                 'On the "Sales" worksheet, change the elements displayed on the chart by changing the chart layout to *Layout 3*.'
             ]
+
         ]
     },
+
+    // Proyecto 2 
     proyecto2: {
         nombre: "StudentsGrades",
         archivo: "./projects/StudentsGrades.xlsx",
@@ -132,8 +139,7 @@ const bancoDePreguntas = {
                 'You are analyzing grade and attendance data for a math class. In the document properties, add "Math 101" as a tag.'
             ],
             [
-                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 15 minutes from 8:00 AM.',
-                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 45 minutes from 8:00 AM.'
+                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 15 minutes from 8:00 AM.'
             ],
             [
                 'On the "Grades" worksheet, in the "Attendance" column, use conditional formatting to apply the *Green Fill with Dark Green Text* format to cells that contain values greater than "97".'
@@ -150,8 +156,191 @@ const bancoDePreguntas = {
             [
                 'On the "Attendance Analysis" worksheet, add the alt text description "Attendance chart" to the chart.'
             ]
+
+        ]
+    },
+
+    proyecto5P1: {
+        nombre: "CoffeeInventory",
+        archivo: "./projects/CoffeeInventory05.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to 'http://fourthcoffee.com'. Display the text 'More information' in the cell."
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the 'Inventory' worksheet copy cells A1: D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Column widths from the source worksheet."
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the 'Inventory' worksheet, apply the Currency number format to cells D4: D33. Display the numbers with only two decimal places"
+
+            ],
+
+            // Table Style Options
+            [
+                "On the 'Roasting' worksheet, configure the table style options to automatically shade every other table row."
+
+            ]
+        ]
+    },
+
+    // Proyecto 4 
+    proyecto4P1: {
+        nombre: "VolunteerRoster",
+        archivo: "./projects/VolunteerRoster04.xlsx",
+        preguntas: [
+            [
+                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
+            ],
+
+            // Insert a Note or Comment
+            [
+                "On the ‘Roster’ worksheet, in cell E4, insert a New Note with the text “Bonus for 10+ years”."
+
+            ],
+
+            // Conditional Function Using Volunteer Data
+            [
+                "On the “Roster” worksheet, in the “Award Type” column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank."
+            ],
+
+            // Formula for Display Name Format (Last Name, First Name)
+            [
+                "On the “Roster” worksheet, in the “Display Name” column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam"
+            ]
+        ]
+    },
+
+    // Proyecto 6
+    proyecto6P1: {
+        nombre: "ScoreSummary",
+        archivo: "./projects/ScoreSummary06.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "Configure the “Students” sheet so that only cells C3:E18 are printed"
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
+
+            ],
+            // Table Style Options
+            [
+                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
+
+            ]
+        ]
+    },
+    proyecto10: {
+        nombre: "Product List",
+        archivo: "./projects/P1-ProductList.xlsx",
+        preguntas: [
+
+            [
+                "In the'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll."
+            ],
+            [
+                "On the “Products” worksheet, in the “Quantity” column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values. 🚦"
+            ],
+            [
+                "On the ‘Products’ worksheet, apply the White, Table Style Medium 1 style to the table."
+            ],
+            [
+                "On the “Products” worksheet, in the “Projected Value” column, enter a formula that multiplies the value in the “Current Value” column by the “Increase” named range. Use the column name and range name in the formula instead of cell references or values.",
+            ],
+            [
+                "On the “Summary” worksheet, apply the Colorful Palette 2 color to the chart.",
+            ]
+        ]
+
+    },
+    proyecto11: {
+        nombre: "Clients",
+        archivo: "./projects/P3-Clients.xlsx",
+        preguntas: [
+            [
+                "On the “Customer Billing” sheet, change the margins to Narrow"
+            ],
+
+            // Adjusting Page Breaks (No Variants)
+            [
+                "On the “Consultants” worksheet, adjust the page breaks so that the worksheet prints on two pages. Cells A1:D23 should print on the first page, and the entire chart should print on the second page."
+            ],
+
+            // Variants of Using the RANDBETWEEN Function for Random Number Generation
+            [
+                "3.	On the “New Clients” worksheet, in cells C4:C13, use the “RANDBETWEEN” function to generate a random “Consultant ID” number from 1 to 10 in each cell."
+            ],
+
+            // Variants of Applying Styles to Cell A1 on the "New Clients" Worksheet
+            [
+                "4.	On the ‘New Clients’ worksheet, apply the Title style to cell A1"
+            ],
+
+            // Variants of Sorting Clients in Ascending or Descending Order
+            [
+                "On the ‘New Clients’ worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in ascending order."
+            ],
+
+            // Variants of Adding Alt Text to the Chart on the "Consultants" Worksheet
+            [
+                "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
+            ]
+        ]
+    },
+    // Proyecto 7
+    proyecto12: {
+        nombre: "Residences",
+        archivo: "./projects/P7–Residences.xlsx",
+        preguntas: [
+            //  Inserting a Hyperlink
+            [
+                "In the document properties, add ‘Rent’ as a tag."
+            ],
+
+            // Question 2: Copy and Paste Options
+            [
+                "On the ‘Income’ worksheet, name the range B2:B4 ‘Income’"
+
+            ],
+
+            // Applying Number Formats
+            [
+                "On the ‘Real Estate’ worksheet, filter the table data to hide all rows with ‘Studio’ in the ‘Type’ column."
+
+            ],
+
+            // Table Style Options
+            [
+                "On the “Real Estate” worksheet, in the “Rent Increase” column, enter a formula that multiplies the value in the “Monthly Rent” column by cell C25."
+
+            ],
+            [
+                "On the ‘Income’ worksheet, modify the chart to display the legend to the right of the chart."
+
+            ]
         ]
     }
+
 };
 
 // Estado de la aplicación
@@ -161,7 +350,7 @@ const state = {
     currentQuestionIndex: 0,
     selectedVariants: [],
     timer: null,
-    secondsRemaining: 40 * 60,
+    secondsRemaining: 80 * 60,
     questionStates: {}
 };
 
@@ -362,7 +551,7 @@ const projects = {
 
         state.currentProjectIndex = 0;
         state.currentQuestionIndex = 0;
-        state.secondsRemaining = 40 * 60;
+        state.secondsRemaining = 80 * 60;
         state.questionStates = {};
 
         const firstProjectKey = state.projectKeys[0];
