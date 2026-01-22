@@ -1,342 +1,89 @@
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {
-        nombre: "JobReport",
-        archivo: "./projects/JobReport.xlsx",
-        preguntas: [
-
-            [
-                "On the *Last Quarter* worksheet, freeze row 1 so it remains visible while scrolling."
-            ],
-            [
-                "On the *Last Quarter* worksheet, in cell A3, apply the *Strikethrough* font effect to the name *Danner, Ryan*."
-            ],
-            [
-                "On the 'Summary' worksheet, in the 'Trend' column, insert *Line* sparklines to show the trends from 'Year 1' through 'Year 5'."
-            ],
-            [
-                "On the 'Last Quarter' worksheet, in column F, beginning in cell F2, use a function to display each 'Job Title' from the table without retrieving duplicate entries."
-            ],
-            [
-                "On the 'Job Openings' worksheet, modify the chart to display the Primary Vertical axis title. Enter the title 'Jobs'."
-            ]
-        ]
-
-
-
-    },
-
-    // Proyecto 4 
-    proyecto4: {
-        nombre: "Attendance",
-        archivo: "./projects/Attendance.xlsx",
+        nombre: "Games_Sales",
+        archivo: "./projects/Games_Sales.xlsx",
         preguntas: [
             [
-                'You are preparing student attendance and grade data to present to your school\'s administrators. On the "Score" worksheet, insert page numbering in the center of the footer using the format *Page [P] of [N]*, where *[P]* is the *Page Number* and *[N]* is the *Number of Pages*.'
+                "In the *Videojuegos* sheet, keep only the last entry for each Video Game and remove all other duplicate rows based on Gender.",
+                "In the *Videojuegos* sheet, eliminate duplicate entries for each Video Game, retaining only the most oldest record according to Gender.",
             ],
             [
-                'On the "Score Summary" worksheet, display the formulas instead of the values.'
+                `In the *Profesiones* sheet, in the *Employee ID* column, apply a custom number format to automatically display each ID with the "#" symbol followed by five digits. The existing number must be padded with zeros on the left side. To create the five digits, follow this example:
+            For example, '123' will be displayed as '#00123'`,
+                `Apply a custom number format in the *Profesiones* sheet for the *Employee ID* column that shows the "$" symbol plus six digits, padding numbers with leading zeros. Example: '123' becomes '$000123'`,
+                `In the *Profesiones* sheet, format the *Employee ID* column with a custom format displaying "#" followed by a four number with left-side zero padding (e.g., '123' displays as '#0123').`
             ],
             [
-                'On the "Attendance" worksheet, configure rows 1 through 4 to repeat on all printed pages.'
+                "Require users to use the password 123456 and prevent users from adding, deleting, moving, and hiding sheets in the current workbook by protecting its structure.",
+                "Protect the workbook structure with password KZRE44 to prevent users from adding, deleting, moving, or hiding sheets.",
+                "Apply structure protection to the workbook using password JHSAHJVASHJV33, restricting users from modifying, removing, relocating, or concealing sheets."
             ],
             [
-                'On the "Attendance" worksheet, delete the rows that have "Elective" in the "Class" column.'
+                `In the "Ganancias" sheet, use Goal Seek to determine the change in cell E6 that would result in a Quantity Sold of $96 in cell G6.`,
+                `Apply Goal Seek in the "Ganancias" sheet to calculate what value cell E6 needs to achieve a Quantity Sold of $500 in cell G6.`,
+                `In the "Ganancias" sheet, utilize Goal Seek to find the required value for cell E8 to reach a target Quantity Sold of $96 in cell G8.`
             ],
             [
-                'On the "Scores" worksheet, unmerge cell A1.'
-            ],
-            [
-                'On the "Attendance Summary" worksheet, update the chart to include the "Last Year" data.'
+                `In the Ganancias sheet, write a formula in cell J13 that returns the "highest" Quantity Sold based on the Platform and Genre shown in cells J10 and J11.`,
+                `Create a formula in cell J13 of the Ganancias sheet that calculates "Lowest" Quantity Sold for the Platform and Genre specified in cells J10 and J11.`
             ]
-        ]
-    },
-
-
-
-    // Proyecto 6
-    proyecto6: {
-        nombre: "AccountBalances",
-        archivo: "./projects/AccountBalances.xlsx",
-        preguntas: [
-            [
-                'You are compiling confidential data regarding the performance of selected clients of Woodgrove Bank. Navigate to the range named "EducationsQ1" and change the value in the first cell of the range to "$16,000".'
-            ],
-            [
-                'Check the workbook for accessibility issues. Correct the issue reported in the inspection result by performing the recommended action and selecting an option that displays negative numbers with a negative sign.'
-            ],
-            [
-                'On the "Summary" worksheet, apply the *Accounting* number format to cells B4:E12. Display the numbers with only two decimal places.'
-            ],
-            [
-                'On the "Summary" worksheet, in cell B14, enter a formula that adds all the cells in the named range "YearEnd". Use the range name in the formula instead of cell references or values.'
-            ],
-            [
-                'On the "Health & Research" worksheet, configure the table style option to automatically emphasize the first column of the table.'
-            ]
-
-
-        ]
-    },
-    // Proyecto 3 
-    proyecto3: {
-        nombre: "BookPublishing",
-        archivo: "./projects/BookPublishing.xlsx",
-        preguntas: [
-            [
-                'You are preparing inventory reports for Lucerne Publishing. On the "Out of Print" worksheet, beginning at cell A3, import the data from the *OutOfPrint* text file in the *Document* folder. Ensure that the table uses the first row of the data source as headers. Note: The resulting data must be a table and not a range.'
-            ],
-            [
-                'On the "Inventory" worksheet, set the horizontal text alignment of cells I2:J2 to *Center Across Selection*.'
-            ],
-            [
-                'On the "Inventory" worksheet, add only column G to the "Year End Inventory" table so that "Total Value" becomes the header of a new table column.'
-            ],
-            [
-                'On the "Inventory" worksheet, in cell F26, use a function to display the largest value from the "Unit Price" column of the "Year End Inventory" table.'
-            ],
-            [
-                'On the "Comparison" worksheet, using the "Regional Price Comparison" data, create a *3-D Pie* chart that displays the "Total Value" data for each "Region". Display the regions as the legend. Display the title "Total Value". The exact size and position of the chart do not matter.'
-            ],
-            [
-                'On the "Inventory" worksheet, modify the chart to display the series values as data labels in the *Center* of each column.'
-            ]
-        ]
-    },
-    // Proyecto 5
-    proyecto5: {
-        nombre: "FitnessEquipment",
-        archivo: "./projects/FitnessEquipment.xlsx",
-        preguntas: [
-            [
-                'You are organizing sales data to present at the next quarterly business meeting. On the "Fitness Equipment" worksheet, change the print orientation to *Landscape*.'
-            ],
-            [
-                'On the "Sales" worksheet, apply the *White, Table Style Light 1* style to the table.'
-            ],
-            [
-                'On the "Fitness Equipment" worksheet, in the "Commission" column, enter a formula that multiplies the value in the "Sales Amount" column by the "CommissionRate" named range. Use the column name and range name in the formula instead of cell references or values.'
-            ],
-            [
-                'On the "Fitness Equipment" worksheet, in cell J24, use a function to count the number of transactions in the "Transaction ID" column.'
-            ],
-            [
-                'On the "Fitness Equipment" worksheet, in the "Equipment ID" column, use a function to display the last 4 digits of the "Model" name from column D.'
-            ],
-            [
-                'On the "Sales" worksheet, change the elements displayed on the chart by changing the chart layout to *Layout 3*.'
-            ]
-
         ]
     },
 
     // Proyecto 2 
-    proyecto2: {
-        nombre: "StudentsGrades",
-        archivo: "./projects/StudentsGrades.xlsx",
+    proyecto4: {
+        nombre: "PivoteTable",
+        archivo: "./projects/PivoteTable.xlsx",
         preguntas: [
             [
-                'You are analyzing grade and attendance data for a math class. In the document properties, add "Math 101" as a tag.'
+                'In the Analisis de videojuegos sheet, modify the pivot table to group the data in 5-day intervals, accepting the default start and end dates.',
+                'Adjust the pivot table in the Analisis de videojuegos sheet to organize data into 8-day groupings using the default starting and ending dates.',
+                'In the Analisis de videojuegos sheet, configure the pivot table grouping by 10-day periods with automatic start and end date settings.'
             ],
             [
-                'On the "Presentation Schedule" worksheet, presentations are scheduled every 30 minutes. Modify the formula in the "Time" column so that presentations are scheduled every 15 minutes from 8:00 AM.'
+                'In the Resumen sheet, configure the Pivot Table to display a blank line below the last Genre in each Platform section.',
             ],
             [
-                'On the "Grades" worksheet, in the "Attendance" column, use conditional formatting to apply the *Green Fill with Dark Green Text* format to cells that contain values greater than "97".'
+                'Configure Microsoft Excel to automatically save a recovered version of each open file every 16 minutes.',
+                'Set Excel to create AutoRecover backups of all open files at 10-minute intervals.',
+                'Adjust Excel settings to automatically save recovery versions of open workbooks every 25 minutes.'
             ],
             [
-                'On the "Grades" worksheet, perform a multi-level sort. Sort the table data by "Final" (*Largest to Smallest*) and then by "Student ID" (Smallest to Largest).'
+                'In the "Aventuras" sheet, in cells C8:G8, use Fill Series to project a Geometric trend of 12 percent for each year in the London office.',
+                'Apply Fill Series in cells C8:G8 of the "Aventuras" sheet to generate a Geometric progression with a 18 percent growth rate for the London office yearly data.',
+                'In the "Aventuras" sheet, utilize the Fill Series feature in the range C8:G8 to create a Geometric sequence showing 63 percent annual increase for London office.'
             ],
             [
-                'On the "Grades" worksheet, in the "Bonus" column, enter a formula that multiplies the value in the "Attendance" column by cell H4.'
-            ],
-            [
-                'On the "Grades" worksheet, in the "Posted Scores" column, use a function to display the value from the "Student ID" column, followed by the text "-Final Exam-", and the value from the "Final" column. For example: *889999-Final Exam-100*.'
-            ],
-            [
-                'On the "Attendance Analysis" worksheet, add the alt text description "Attendance chart" to the chart.'
-            ]
-
-        ]
-    },
-
-    proyecto5P1: {
-        nombre: "CoffeeInventory",
-        archivo: "./projects/CoffeeInventory05.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "On the 'Roasting' worksheet, in cell A10, insert a hyperlink to 'http://fourthcoffee.com'. Display the text 'More information' in the cell."
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the 'Inventory' worksheet copy cells A1: D33. Select cell A1 of the 'Archive' worksheet and paste the copied cells, retaining the Column widths from the source worksheet."
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the 'Inventory' worksheet, apply the Currency number format to cells D4: D33. Display the numbers with only two decimal places"
-
-            ],
-
-            // Table Style Options
-            [
-                "On the 'Roasting' worksheet, configure the table style options to automatically shade every other table row."
-
-            ]
-        ]
-    },
-
-    // Proyecto 4 
-    proyecto4P1: {
-        nombre: "VolunteerRoster",
-        archivo: "./projects/VolunteerRoster04.xlsx",
-        preguntas: [
-            [
-                "On the “Training” worksheet, add the Current Date to the right header cell. Use a technique that updates the date each time."
-            ],
-
-            // Insert a Note or Comment
-            [
-                "On the ‘Roster’ worksheet, in cell E4, insert a New Note with the text “Bonus for 10+ years”."
-
-            ],
-
-            // Conditional Function Using Volunteer Data
-            [
-                "On the “Roster” worksheet, in the “Award Type” column, use a function to display “Gold” for each volunteer with 10 or more years of service. Otherwise, leave the “Award Type” blank."
-            ],
-
-            // Formula for Display Name Format (Last Name, First Name)
-            [
-                "On the “Roster” worksheet, in the “Display Name” column, enter a formula to display the volunteers’ names in the Last Name, First Name format. For example: Barr, Adam"
+                'All cells in the "Localidades" sheet are unlocked. Lock only cells F4:F10. Ensure that users can select and format cells after protecting the sheet. Protect the sheet with the password 4567.',
+                'In the "Localidades" sheet, lock exclusively the range F4:F10 while allowing cell selection and formatting. Apply sheet protection using password dfnijsdhb.',
+                'Lock cells F4:F10 in the "Localidades" sheet (all other cells remain unlocked), permit users to select and format cells, and protect the sheet with password HELLOWORLD.'
             ]
         ]
     },
 
     // Proyecto 6
-    proyecto6P1: {
-        nombre: "ScoreSummary",
-        archivo: "./projects/ScoreSummary06.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "Configure the “Students” sheet so that only cells C3:E18 are printed"
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the ‘Scores’ worksheet, configure A3:F3 to automatically wrap the text"
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the “Scores” sheet, in the “Trend” column, insert Line sparklines to compare the results of “Test 1,” “Test 2,” and “Test 3."
-
-            ],
-
-            // Table Style Options
-            [
-                "On the “Students” worksheet, in the “Graduation Year” column, use a function to display the first 4 numbers of the “Student Number” from column A."
-
-            ],
-            // Table Style Options
-            [
-                "On the ‘Scores’ worksheet, update the chart to include the ‘Test 2’ and ‘Test 3’ scores. Note: The data series should display in the order ‘Test 1’, ‘Test 2’, ‘Test 3’."
-
-            ]
-        ]
-    },
-    proyecto10: {
-        nombre: "Product List",
-        archivo: "./projects/P1-ProductList.xlsx",
-        preguntas: [
-
-            [
-                "In the'Products' spreadsheet, freeze rows 1 and 2 so that the title and column headers remain visible as you scroll."
-            ],
-            [
-                "On the “Products” worksheet, in the “Quantity” column, use conditional formatting to apply the 3 Traffic Lights (Unrimmed) format to the values. 🚦"
-            ],
-            [
-                "On the ‘Products’ worksheet, apply the White, Table Style Medium 1 style to the table."
-            ],
-            [
-                "On the “Products” worksheet, in the “Projected Value” column, enter a formula that multiplies the value in the “Current Value” column by the “Increase” named range. Use the column name and range name in the formula instead of cell references or values.",
-            ],
-            [
-                "On the “Summary” worksheet, apply the Colorful Palette 2 color to the chart.",
-            ]
-        ]
-
-    },
-    proyecto11: {
-        nombre: "Clients",
-        archivo: "./projects/P3-Clients.xlsx",
+    proyecto6: {
+        nombre: "Formating",
+        archivo: "./projects/Formating.xlsx",
         preguntas: [
             [
-                "On the “Customer Billing” sheet, change the margins to Narrow"
+                'In the Ciberjuegos sheet, in the Total Sales column, design a conditional formatting rule that uses the Icon Sets style to display a pink circle when the value is greater than or equal to "7", a yellow circle when the value is less than "7" and greater than or equal to "4", and a gray circle when it is less than "4".',
+                'Create a conditional formatting rule in the Total Sales column of the Ciberjuegos sheet using Icon Sets: pink circle for values ≥ 8, red circle for values between 5 and 7.99, and gray circle for values < 5.',
+                'In the Ciberjuegos sheet, apply Icon Sets conditional formatting to the Total Sales column showing red circles (≥ 7), gray circles (4 to < 7), and pink circles (< 4).'
             ],
-
-            // Adjusting Page Breaks (No Variants)
             [
-                "On the “Consultants” worksheet, adjust the page breaks so that the worksheet prints on two pages. Cells A1:D23 should print on the first page, and the entire chart should print on the second page."
+                'The Bicycle company will give gift cards for $100, $200, $300 to customers who have shown loyalty during the first quarter of the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions.',
             ],
-
-            // Variants of Using the RANDBETWEEN Function for Random Number Generation
             [
-                "3.	On the “New Clients” worksheet, in cells C4:C13, use the “RANDBETWEEN” function to generate a random “Consultant ID” number from 1 to 10 in each cell."
-            ],
-
-            // Variants of Applying Styles to Cell A1 on the "New Clients" Worksheet
-            [
-                "4.	On the ‘New Clients’ worksheet, apply the Title style to cell A1"
-            ],
-
-            // Variants of Sorting Clients in Ascending or Descending Order
-            [
-                "On the ‘New Clients’ worksheet, in cells B4:B13, use a function to display the clients from cells E4:E13 in ascending order."
-            ],
-
-            // Variants of Adding Alt Text to the Chart on the "Consultants" Worksheet
-            [
-                "On the “Consultants” worksheet, add the alt text description “Weekly hours chart” to the chart."
-            ]
-        ]
-    },
-    // Proyecto 7
-    proyecto12: {
-        nombre: "Residences",
-        archivo: "./projects/P7–Residences.xlsx",
-        preguntas: [
-            //  Inserting a Hyperlink
-            [
-                "In the document properties, add ‘Rent’ as a tag."
-            ],
-
-            // Question 2: Copy and Paste Options
-            [
-                "On the ‘Income’ worksheet, name the range B2:B4 ‘Income’"
-
-            ],
-
-            // Applying Number Formats
-            [
-                "On the ‘Real Estate’ worksheet, filter the table data to hide all rows with ‘Studio’ in the ‘Type’ column."
-
-            ],
-
-            // Table Style Options
-            [
-                "On the “Real Estate” worksheet, in the “Rent Increase” column, enter a formula that multiplies the value in the “Monthly Rent” column by cell C25."
+                'In the Pivote sheet, add two row fields to the pivot table: : "Editorial" and "Genero"  , and in the values section, the sum and average of "Ventas USA".',
+                'Configure the pivot table in the Pivote sheet by adding "Editorial" and "Plataforma" as row fields, and including both the sum and average of "Ventas EU" in the values area.',
 
             ],
             [
-                "On the ‘Income’ worksheet, modify the chart to display the legend to the right of the chart."
-
+                'Use a Slicer to filter the pivot table by the Plataforma field, showing the 3DS records. The size and location of the slicer are not relevant.',
+                'Insert a Slicer for the Plataforma field to filter the pivot table and display only SAT data. Positioning and dimensions are not important.',
+                'Add a Slicer to filter the pivot table by Plataforma, selecting GBA records. The slicer\'s size and placement are not critical.'
             ]
         ]
     }
