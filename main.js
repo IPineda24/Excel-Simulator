@@ -1,3 +1,4 @@
+window.location.href = "./projects/Games_Sales.xlsx";
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {
@@ -87,149 +88,149 @@ const bancoDePreguntas = {
             ]
         ]
     }
-
 };
 
-// Estado de la aplicación
+// Estado global
 const state = {
-    projectKeys: [],
     currentProjectIndex: 0,
     currentQuestionIndex: 0,
-    selectedVariants: [],
-    timer: null,
+    projectKeys: [],
     secondsRemaining: 80 * 60,
-    questionStates: {}
+    questionStates: {},
+    selectedVariants: {} // NUEVO: almacena las variantes seleccionadas para cada proyecto
 };
 
 // Utilidades
 const utils = {
-    formatTime(seconds) {
-        const min = Math.floor(seconds / 60);
-        const sec = seconds % 60;
-        return `${String(min).padStart(2, '0')}:${String(sec).padStart(2, '0')}`;
-    },
-
-    shuffleArray(array) {
-        const shuffled = [...array];
-        for (let i = shuffled.length - 1; i > 0; i--) {
-            const j = Math.floor(Math.random() * (i + 1));
-            [shuffled[i], shuffled[j]] = [shuffled[j], shuffled[i]];
-        }
-        return shuffled;
-    },
-
-    initializeProjectOrder() {
-        state.projectKeys = this.shuffleArray(Object.keys(bancoDePreguntas));
-    },
-
-    selectRandomVariants(projectKey) {
-        const { preguntas } = bancoDePreguntas[projectKey];
-        state.selectedVariants = preguntas.map(variants =>
-            variants[Math.floor(Math.random() * variants.length)]
-        );
-    },
-
     getCurrentProject() {
         return bancoDePreguntas[state.projectKeys[state.currentProjectIndex]];
     },
 
-    navigateToProject(projectKey) {
-        window.location.href = bancoDePreguntas[projectKey].archivo;
-    }
-};
+    initializeProjectOrder() {
+        state.projectKeys = Object.keys(bancoDePreguntas);
+        // Los proyectos ahora se cargan en orden, sin aleatorizar
+    },
 
-// Gestión del timer
-const timer = {
-    start() {
-        state.timer = setInterval(() => {
-            state.secondsRemaining--;
-            this.display();
+    // FUNCIÓN CORREGIDA: Selecciona una variante aleatoria de cada pregunta
+    selectRandomVariants(projectKey) {
+        const project = bancoDePreguntas[projectKey];
+        state.selectedVariants[projectKey] = [];
 
-            if (state.secondsRemaining <= 0) {
-                this.stop();
-                alert("Time is up! The project will be submitted.");
+        project.preguntas.forEach((preguntaVariantes) => {
+            // Si es un array de variantes, selecciona una aleatoria
+            if (Array.isArray(preguntaVariantes)) {
+                const randomIndex = Math.floor(Math.random() * preguntaVariantes.length);
+                state.selectedVariants[projectKey].push(preguntaVariantes[randomIndex]);
+            } else {
+                // Si no es array, usa la pregunta tal cual
+                state.selectedVariants[projectKey].push(preguntaVariantes);
             }
-        }, 1000);
+        });
     },
 
-    stop() {
-        clearInterval(state.timer);
-    },
-
-    display() {
-        document.getElementById("timer").textContent = utils.formatTime(state.secondsRemaining);
+    navigateToProject(projectKey) {
+        const project = bancoDePreguntas[projectKey];
+        console.log(`Navegando al proyecto: ${project.nombre}`);
+        console.log(`Archivo: ${project.archivo}`);
     }
 };
 
 // Gestión de preguntas
 const questions = {
-    load(index) {
-        document.getElementById("question-text").textContent = state.selectedVariants[index];
-        this.updateNavigationButtons();
-        this.updateActionButtons(index);
+    load(questionIndex) {
+        const projectKey = state.projectKeys[state.currentProjectIndex];
+
+        // CAMBIO: Usa las variantes seleccionadas en lugar del array original
+        const selectedQuestions = state.selectedVariants[projectKey];
+        const questionText = selectedQuestions[questionIndex];
+
+        document.getElementById("question-text").textContent = questionText;
+        this.updateNavigationState(questionIndex);
     },
 
-    updateNavigationButtons() {
-        const buttons = document.querySelectorAll(".question-btn");
+    updateNavigationState(currentIndex) {
+        const buttons = document.querySelectorAll('.question-btn');
+        const icons = document.querySelectorAll('.question-icon');
+        const projectKey = state.projectKeys[state.currentProjectIndex];
 
-        buttons.forEach((btn, i) => {
-            btn.classList.remove("active", "completed", "review");
-            const wrapper = btn.parentElement;
-            const icon = wrapper.querySelector('.question-icon');
+        buttons.forEach((btn, idx) => {
+            btn.classList.toggle('active', idx === currentIndex);
 
-            if (i === state.currentQuestionIndex) {
-                btn.classList.add("active");
-            }
+            const stateKey = `${projectKey}-${idx}`;
+            const questionState = state.questionStates[stateKey];
 
-            const questionState = state.questionStates[i];
-            if (questionState === "completed") {
-                btn.classList.add("completed");
-                icon.textContent = "✅";
-                icon.style.display = "block";
-            } else if (questionState === "review") {
-                btn.classList.add("review");
-                icon.textContent = "🚩";
-                icon.style.display = "block";
-            } else {
-                icon.textContent = "";
-                icon.style.display = "none";
+            icons[idx].textContent = '';
+            icons[idx].className = 'question-icon';
+
+            if (questionState === 'completed') {
+                icons[idx].textContent = '✓';
+                icons[idx].classList.add('completed');
+            } else if (questionState === 'review') {
+                icons[idx].textContent = '!';
+                icons[idx].classList.add('review');
             }
         });
     },
 
-    updateActionButtons(index) {
-        const markCompleteBtn = document.getElementById("markFC");
-        const markReviewBtn = document.getElementById("markFR");
-        const currentState = state.questionStates[index];
-
-        markCompleteBtn.classList.toggle("active-btn", currentState === "completed");
-        markReviewBtn.classList.toggle("active-btn", currentState === "review");
-    },
-
     navigate(direction) {
         const project = utils.getCurrentProject();
-        const maxIndex = project.preguntas.length - 1;
+        const totalQuestions = project.preguntas.length;
 
-        if (direction === 'prev' && state.currentQuestionIndex > 0) {
-            state.currentQuestionIndex--;
-            this.load(state.currentQuestionIndex);
-        } else if (direction === 'next' && state.currentQuestionIndex < maxIndex) {
+        if (direction === 'next' && state.currentQuestionIndex < totalQuestions - 1) {
             state.currentQuestionIndex++;
-            this.load(state.currentQuestionIndex);
+        } else if (direction === 'prev' && state.currentQuestionIndex > 0) {
+            state.currentQuestionIndex--;
         }
+
+        this.load(state.currentQuestionIndex);
     },
 
     toggleState(newState) {
-        const { currentQuestionIndex } = state;
-        const currentState = state.questionStates[currentQuestionIndex];
+        const projectKey = state.projectKeys[state.currentProjectIndex];
+        const stateKey = `${projectKey}-${state.currentQuestionIndex}`;
 
-        if (currentState === newState) {
-            delete state.questionStates[currentQuestionIndex];
+        if (state.questionStates[stateKey] === newState) {
+            delete state.questionStates[stateKey];
         } else {
-            state.questionStates[currentQuestionIndex] = newState;
+            state.questionStates[stateKey] = newState;
         }
 
-        this.load(currentQuestionIndex);
+        this.updateNavigationState(state.currentQuestionIndex);
+    }
+};
+
+// Temporizador
+const timer = {
+    intervalId: null,
+
+    start() {
+        if (this.intervalId) return;
+
+        this.intervalId = setInterval(() => {
+            if (state.secondsRemaining > 0) {
+                state.secondsRemaining--;
+                this.update();
+            } else {
+                this.stop();
+                alert("¡El tiempo ha terminado!");
+            }
+        }, 1000);
+
+        this.update();
+    },
+
+    stop() {
+        if (this.intervalId) {
+            clearInterval(this.intervalId);
+            this.intervalId = null;
+        }
+    },
+
+    update() {
+        const minutes = Math.floor(state.secondsRemaining / 60);
+        const seconds = state.secondsRemaining % 60;
+        document.getElementById("timer").textContent =
+            `${minutes}:${seconds.toString().padStart(2, '0')}`;
     }
 };
 
@@ -252,13 +253,11 @@ const projects = {
         const nav = document.getElementById("navigation-bar");
         nav.innerHTML = '';
 
-        // Botón anterior
         const prevBtn = document.createElement('button');
         prevBtn.textContent = "◄";
         prevBtn.onclick = () => questions.navigate('prev');
         nav.appendChild(prevBtn);
 
-        // Botones de preguntas
         for (let i = 0; i < totalQuestions; i++) {
             const wrapper = document.createElement('div');
             wrapper.className = 'question-btn-wrapper';
@@ -282,7 +281,6 @@ const projects = {
             nav.appendChild(wrapper);
         }
 
-        // Botón siguiente
         const nextBtn = document.createElement('button');
         nextBtn.textContent = "►";
         nextBtn.onclick = () => questions.navigate('next');
@@ -290,11 +288,13 @@ const projects = {
     },
 
     submit() {
+        // Obtener la ruta del archivo actual y redirigir
         const nextIndex = (state.currentProjectIndex + 1) % state.projectKeys.length;
         const nextProjectKey = state.projectKeys[nextIndex];
+        const archivoProyecto = bancoDePreguntas[nextProjectKey].archivo;
+        window.location.href = archivoProyecto; // Redirigir al archivo del siguiente proyecto
 
-        utils.navigateToProject(nextProjectKey);
-
+        // Cambiar al siguiente proyecto
         state.currentProjectIndex = nextIndex;
         state.currentQuestionIndex = 0;
 
@@ -319,14 +319,30 @@ const projects = {
         utils.selectRandomVariants(firstProjectKey);
         this.load();
         timer.start();
-
-        utils.navigateToProject(firstProjectKey);
     }
 };
 
-// Event Listeners
-document.getElementById('downloadBtn').addEventListener('click', () => {
-    const fileContent = `Género,           Id. de inventario,            Región,              Id. de autor,           En stock,        Precio unitario
+// Inicialización
+utils.initializeProjectOrder();
+utils.selectRandomVariants(state.projectKeys[state.currentProjectIndex]);
+projects.load();
+timer.start();
+utils.navigateToProject(state.projectKeys[0]); // Descargar primer proyecto al cargar
+
+// Event Listeners - DEBEN IR DESPUÉS DE LA INICIALIZACIÓN
+document.getElementById("markFC").onclick = () => questions.toggleState("completed");
+document.getElementById("markFR").onclick = () => questions.toggleState("review");
+document.getElementById("submit-project").onclick = () => {
+    alert("Proyecto enviado.");
+    projects.submit();
+};
+document.getElementById("reset-btn").onclick = () => projects.reset();
+
+// Botón de descarga de TXT (mantener funcionalidad original)
+const downloadBtn = document.getElementById('downloadBtn');
+if (downloadBtn) {
+    downloadBtn.onclick = () => {
+        const fileContent = `Género,           Id. de inventario,            Región,              Id. de autor,           En stock,        Precio unitario
 Misterio,             11222,                    Este,                 76-9160,                   3,                  180
 Romance,              11636,                    Este,                 77-9133,                   12,                 190
 De no ficción,        12428,                    Este,                 32-7020,                   3,                  210
@@ -337,27 +353,13 @@ De no ficción,        12702,                    Este,                 81-7230, 
 Misterio,             17473,                    Este,                 32-1822,                   0,                  210
 Romance,              18361,                    Este,                 83-2623,                   2,                  200`;
 
-    const blob = new Blob([fileContent], { type: 'text/plain' });
-    const link = document.createElement('a');
-    link.href = URL.createObjectURL(blob);
-    link.download = 'OutOfPrint.txt';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-    URL.revokeObjectURL(link.href);
-});
-
-document.getElementById("markFC").onclick = () => questions.toggleState("completed");
-document.getElementById("markFR").onclick = () => questions.toggleState("review");
-document.getElementById("submit-project").onclick = () => {
-    alert("Proyecto enviado.");
-    projects.submit();
-};
-document.getElementById("reset-btn").onclick = () => projects.reset();
-
-// Inicialización
-utils.initializeProjectOrder();
-utils.selectRandomVariants(state.projectKeys[state.currentProjectIndex]);
-projects.load();
-timer.start();
-utils.navigateToProject(state.projectKeys[0]);
+        const blob = new Blob([fileContent], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'OutOfPrint.txt';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+        URL.revokeObjectURL(link.href);
+    };
+}
