@@ -1,4 +1,6 @@
+// Redirigir al primer proyecto
 window.location.href = "./projects/Games_Sales.xlsx";
+
 // Banco de preguntas
 const bancoDePreguntas = {
     proyecto1: {
@@ -32,7 +34,6 @@ const bancoDePreguntas = {
         ]
     },
 
-    // Proyecto 2 
     proyecto4: {
         nombre: "PivoteTable",
         archivo: "./projects/PivoteTable.xlsx",
@@ -63,7 +64,6 @@ const bancoDePreguntas = {
         ]
     },
 
-    // Proyecto 6
     proyecto6: {
         nombre: "Formating",
         archivo: "./projects/Formating.xlsx",
@@ -79,7 +79,6 @@ const bancoDePreguntas = {
             [
                 'In the Pivote sheet, add two row fields to the pivot table: : "Editorial" and "Genero"  , and in the values section, the sum and average of "Ventas USA".',
                 'Configure the pivot table in the Pivote sheet by adding "Editorial" and "Plataforma" as row fields, and including both the sum and average of "Ventas EU" in the values area.',
-
             ],
             [
                 'Use a Slicer to filter the pivot table by the Plataforma field, showing the 3DS records. The size and location of the slicer are not relevant.',
@@ -94,10 +93,10 @@ const bancoDePreguntas = {
 const state = {
     currentProjectIndex: 0,
     currentQuestionIndex: 0,
-    projectKeys: [],
+    projectKeys: Object.keys(bancoDePreguntas),
     secondsRemaining: 80 * 60,
     questionStates: {},
-    selectedVariants: {} // NUEVO: almacena las variantes seleccionadas para cada proyecto
+    selectedVariants: {}
 };
 
 // Utilidades
@@ -106,32 +105,13 @@ const utils = {
         return bancoDePreguntas[state.projectKeys[state.currentProjectIndex]];
     },
 
-    initializeProjectOrder() {
-        state.projectKeys = Object.keys(bancoDePreguntas);
-        // Los proyectos ahora se cargan en orden, sin aleatorizar
-    },
-
-    // FUNCIÓN CORREGIDA: Selecciona una variante aleatoria de cada pregunta
     selectRandomVariants(projectKey) {
         const project = bancoDePreguntas[projectKey];
-        state.selectedVariants[projectKey] = [];
-
-        project.preguntas.forEach((preguntaVariantes) => {
-            // Si es un array de variantes, selecciona una aleatoria
-            if (Array.isArray(preguntaVariantes)) {
-                const randomIndex = Math.floor(Math.random() * preguntaVariantes.length);
-                state.selectedVariants[projectKey].push(preguntaVariantes[randomIndex]);
-            } else {
-                // Si no es array, usa la pregunta tal cual
-                state.selectedVariants[projectKey].push(preguntaVariantes);
-            }
-        });
-    },
-
-    navigateToProject(projectKey) {
-        const project = bancoDePreguntas[projectKey];
-        console.log(`Navegando al proyecto: ${project.nombre}`);
-        console.log(`Archivo: ${project.archivo}`);
+        state.selectedVariants[projectKey] = project.preguntas.map(variants =>
+            Array.isArray(variants)
+                ? variants[Math.floor(Math.random() * variants.length)]
+                : variants
+        );
     }
 };
 
@@ -139,10 +119,7 @@ const utils = {
 const questions = {
     load(questionIndex) {
         const projectKey = state.projectKeys[state.currentProjectIndex];
-
-        // CAMBIO: Usa las variantes seleccionadas en lugar del array original
-        const selectedQuestions = state.selectedVariants[projectKey];
-        const questionText = selectedQuestions[questionIndex];
+        const questionText = state.selectedVariants[projectKey][questionIndex];
 
         document.getElementById("question-text").textContent = questionText;
         this.updateNavigationState(questionIndex);
@@ -173,8 +150,7 @@ const questions = {
     },
 
     navigate(direction) {
-        const project = utils.getCurrentProject();
-        const totalQuestions = project.preguntas.length;
+        const totalQuestions = utils.getCurrentProject().preguntas.length;
 
         if (direction === 'next' && state.currentQuestionIndex < totalQuestions - 1) {
             state.currentQuestionIndex++;
@@ -265,7 +241,6 @@ const projects = {
             const btn = document.createElement('button');
             btn.className = "question-btn";
             btn.textContent = i + 1;
-            btn.dataset.questionIndex = i;
             btn.onclick = () => {
                 state.currentQuestionIndex = i;
                 questions.load(i);
@@ -288,13 +263,12 @@ const projects = {
     },
 
     submit() {
-        // Obtener la ruta del archivo actual y redirigir
         const nextIndex = (state.currentProjectIndex + 1) % state.projectKeys.length;
         const nextProjectKey = state.projectKeys[nextIndex];
         const archivoProyecto = bancoDePreguntas[nextProjectKey].archivo;
-        window.location.href = archivoProyecto; // Redirigir al archivo del siguiente proyecto
 
-        // Cambiar al siguiente proyecto
+        window.location.href = archivoProyecto;
+
         state.currentProjectIndex = nextIndex;
         state.currentQuestionIndex = 0;
 
@@ -314,22 +288,18 @@ const projects = {
         state.secondsRemaining = 80 * 60;
         state.questionStates = {};
 
-        utils.initializeProjectOrder();
-        const firstProjectKey = state.projectKeys[0];
-        utils.selectRandomVariants(firstProjectKey);
+        utils.selectRandomVariants(state.projectKeys[0]);
         this.load();
         timer.start();
     }
 };
 
 // Inicialización
-utils.initializeProjectOrder();
-utils.selectRandomVariants(state.projectKeys[state.currentProjectIndex]);
+utils.selectRandomVariants(state.projectKeys[0]);
 projects.load();
 timer.start();
-utils.navigateToProject(state.projectKeys[0]); // Descargar primer proyecto al cargar
 
-// Event Listeners - DEBEN IR DESPUÉS DE LA INICIALIZACIÓN
+// Event Listeners
 document.getElementById("markFC").onclick = () => questions.toggleState("completed");
 document.getElementById("markFR").onclick = () => questions.toggleState("review");
 document.getElementById("submit-project").onclick = () => {
@@ -337,29 +307,3 @@ document.getElementById("submit-project").onclick = () => {
     projects.submit();
 };
 document.getElementById("reset-btn").onclick = () => projects.reset();
-
-// Botón de descarga de TXT (mantener funcionalidad original)
-const downloadBtn = document.getElementById('downloadBtn');
-if (downloadBtn) {
-    downloadBtn.onclick = () => {
-        const fileContent = `Género,           Id. de inventario,            Región,              Id. de autor,           En stock,        Precio unitario
-Misterio,             11222,                    Este,                 76-9160,                   3,                  180
-Romance,              11636,                    Este,                 77-9133,                   12,                 190
-De no ficción,        12428,                    Este,                 32-7020,                   3,                  210
-De no ficción,        12702,                    Este,                 81-7230,                   8,                  210
-Misterio,             12522,                    Este,                 96-9180,                   12,                 190
-De no ficción,        12428,                    Este,                 32-7020,                   7,                  220
-De no ficción,        12702,                    Este,                 81-7230,                   6,                  210
-Misterio,             17473,                    Este,                 32-1822,                   0,                  210
-Romance,              18361,                    Este,                 83-2623,                   2,                  200`;
-
-        const blob = new Blob([fileContent], { type: 'text/plain' });
-        const link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'OutOfPrint.txt';
-        document.body.appendChild(link);
-        link.click();
-        document.body.removeChild(link);
-        URL.revokeObjectURL(link.href);
-    };
-}
