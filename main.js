@@ -9,11 +9,11 @@ const bancoDePreguntas = {
         preguntas: [
             [
                 "In the *Videojuegos* sheet, keep only the last entry for each Video Game and remove all other duplicate rows based on Gender.",
-                "In the *Videojuegos* sheet, eliminate duplicate entries for each Video Game, retaining only the most oldest record according to Gender.",
+                "In the *Videojuegos* sheet, remove all duplicate rows for each Video Game, keep only the most oldest entry according to Gender.",
             ],
             [
                 `In the *Profesiones* sheet, in the *Employee ID* column, apply a custom number format to automatically display each ID with the "#" symbol followed by five digits. The existing number must be padded with zeros on the left side. To create the five digits, follow this example:
-            For example, '123' will be displayed as '#00123'`,
+For example, '123' will be displayed as '#00123'`,
                 `Apply a custom number format in the *Profesiones* sheet for the *Employee ID* column that shows the "$" symbol plus six digits, padding numbers with leading zeros. Example: '123' becomes '$000123'`,
                 `In the *Profesiones* sheet, format the *Employee ID* column with a custom format displaying "#" followed by a four number with left-side zero padding (e.g., '123' displays as '#0123').`
             ],
@@ -34,7 +34,7 @@ const bancoDePreguntas = {
         ]
     },
 
-    proyecto4: {
+    proyecto2: {
         nombre: "PivoteTable",
         archivo: "./projects/PivoteTable.xlsx",
         preguntas: [
@@ -64,7 +64,7 @@ const bancoDePreguntas = {
         ]
     },
 
-    proyecto6: {
+    proyecto3: {
         nombre: "Formating",
         archivo: "./projects/Formating.xlsx",
         preguntas: [
@@ -77,13 +77,63 @@ const bancoDePreguntas = {
                 'The Bicycle company will give gift cards for $100, $200, $300 to customers who have shown loyalty during the first quarter of the year. In cell C4, write a formula that uses the RANDARRAY function to randomly determine the gift card amount that each one will receive. As part of the formula, you may use arithmetic functions.',
             ],
             [
-                'In the Pivote sheet, add two row fields to the pivot table: : "Editorial" and "Genero"  , and in the values section, the sum and average of "Ventas USA".',
+                'In the Pivote sheet, add two row fields to the pivot table: "Editorial" and "Genero", and in the values section, the sum and average of "Ventas USA".',
                 'Configure the pivot table in the Pivote sheet by adding "Editorial" and "Plataforma" as row fields, and including both the sum and average of "Ventas EU" in the values area.',
             ],
             [
                 'Use a Slicer to filter the pivot table by the Plataforma field, showing the 3DS records. The size and location of the slicer are not relevant.',
                 'Insert a Slicer for the Plataforma field to filter the pivot table and display only SAT data. Positioning and dimensions are not important.',
                 'Add a Slicer to filter the pivot table by Plataforma, selecting GBA records. The slicer\'s size and placement are not critical.'
+            ]
+        ]
+    },
+
+    proyecto4: {
+        nombre: "Proyecto_Excel_Charts_And_Formulas",
+        archivo: "./projects/Proyecto_Excel_Charts_And_Formulas.xlsx",
+        preguntas: [
+            [
+                'In the Regiones worksheet, create a Histogram chart that displays the values from the Sales column. Ensure that the bin widths are not modified, and configure the chart to display an overflow bin for values greater than 25,000. Apply number formatting to the bin range so that values display with 0 decimal places, while keeping all other settings at their default. The size and location of the chart are not relevant.'
+            ],
+            [
+                'In the Bicicletas worksheet, in cell G3, review the formula to display the total quantity of items that have an expiration date earlier than the current date. Do not include the current date.'
+            ],
+            [
+                'In the Zonas worksheet, create a chart that displays "Production Units" by location as a clustered column chart and "Maximum Units" by location as a line chart with markers on the same chart. Display the location cities as the horizontal axis labels. The size and position of the chart are not relevant.'
+            ],
+            [
+                'In the Resultados worksheet, in the Best Result column, modify the conditional formatting rule applied to the top 3 scores. Change the font style to bold and apply the color Green, Accent 6, Darker 25% from the theme color palette. There is no need to create new rules or delete existing ones.'
+            ],
+            [
+                'In the Tratamientos worksheet, in cell H3, enter a formula that returns the total amount charged for records marked as "YES" in the Discount column.'
+            ],
+            [
+                'In the Exportación worksheet, in cell D5, enter a formula that displays the data from cells A5:B25 sorted by Price in descending order.'
+            ]
+        ]
+    },
+
+    proyecto5: {
+        nombre: "Advanced_Excel_Features",
+        archivo: "./projects/Advanced_Excel_Features.xlsx",
+        preguntas: [
+            [
+                'In the Analisis worksheet, configure the PivotChart to display the Axis Field Buttons and the Value Field Buttons.'
+            ],
+            [
+                'In the Notas worksheet, use an Excel feature to group all rows in the table that have the value "A" in the Section column. Note: Do not create any other groups in the worksheet.'
+            ],
+            [
+                'In the Notas 2 worksheet, in the Resultados table, create a conditional formatting rule. Use a formula to format the Name column with red text (standard colors) if the average of the four exam scores is greater than 70.'
+            ],
+            [
+                'In the Result worksheet, update the PrintTitleRows and PrintGridlines properties so that the macro automatically prints rows 1:3 as title rows without printing gridlines. Macros are disabled for security reasons, but you may use the Visual Basic Editor.'
+            ],
+            [
+                'Use an Excel function to ungroup the data in the table.'
+            ],
+            [
+                'In the Unit Cost column, create a conditional formatting rule that displays a red check mark when a Unit Cost value exists. No cell icon should be displayed when there is no Unit Cost value.'
             ]
         ]
     }
