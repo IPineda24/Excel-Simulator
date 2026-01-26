@@ -127,13 +127,30 @@ For example, '123' will be displayed as '#00123'`,
                 'In the Notas 2 worksheet, in the Resultados table, create a conditional formatting rule. Use a formula to format the Name column with red text (standard colors) if the average of the four exam scores is greater than 70.'
             ],
             [
-                'In the Result worksheet, update the PrintTitleRows and PrintGridlines properties so that the macro automatically prints rows 1:3 as title rows without printing gridlines. Macros are disabled for security reasons, but you may use the Visual Basic Editor.'
-            ],
-            [
                 'Use an Excel function to ungroup the data in the table.'
             ],
             [
                 'In the Unit Cost column, create a conditional formatting rule that displays a red check mark when a Unit Cost value exists. No cell icon should be displayed when there is no Unit Cost value.'
+            ]
+        ]
+    },
+
+    proyecto6: {
+        nombre: "Macros",
+        archivo: "./projects/Macros.xlsm",
+        preguntas: [
+            [
+                'On the RH worksheet, modify the FormatoTabla macro so that it applies the style “TableStyleLight14”.'
+            ],
+            [
+
+                `On the RH2 worksheet, update the PrintTitleRows and PrintGridlines properties so that the printer macro automatically prints rows 1:3 as title rows without printing gridlines. Macros are disabled for security reasons, but you can use the Visual Basic Editor.`
+            ],
+            [
+                'Configure Excel so that all macros in the workbook are disabled without displaying any notification.'
+            ],
+            [
+                'Configure Excel so that you can edit content using the French (France) language. Do not set this language as the default and do not restart Office if prompted; simply close the dialog box.'
             ]
         ]
     }
