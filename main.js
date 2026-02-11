@@ -153,7 +153,55 @@ For example, '123' will be displayed as '#00123'`,
                 'Configure Excel so that you can edit content using the French (France) language. Do not set this language as the default and do not restart Office if prompted; simply close the dialog box.'
             ]
         ]
-    }
+    },
+    Challenge01: {
+        nombre: " Challenge 1 Analytical Computing",
+        archivo: "./projects/CERTIFICACION MO-211/Analytical Computing.xlsx",
+        preguntas: [
+            [
+                'You are modifying a class gradebook. On the "Assignments" worksheet, in the "Total" column, create a conditional formatting rule. Use a formula to format the text with Orange, Accent 2, Darker 25% font color, Bold Italic font style, and Single underline. Finally, in the fill section, add "Blue, Accent 1" Pattern Color and 6.25% Gray Pattern Style if the "Total" score is greater than the "Passing Score" in cell B29.'
+            ],
+            [
+
+                `On the "Grades" worksheet, in the "Grade" column, enter a formula that displays a "Letter Grade" for each student. Use the "Grade Conversion" table to determine the letter grade based on the "Total" column in the "Grades" table." (USE VLOOKUP OR XLOOKUP ) `
+            ],
+            [
+                'On the "Grades" worksheet, in the "Grade" column, enter a formula that displays a "Letter Grade" for each student. Use the "Grade Conversion" table to determine the letter grade based on the "Total" column in the "Grades" table." (YOU CAN’T USE THE SAME METHOD)'
+            ],
+            [
+                'On the "Weighting" worksheet, create a scenario named "More Exams" that changes the value in cell B4 to "15". Allow changes to be made to the scenario. Then close the Scenario Manager."'
+            ],
+            [
+                'On the "Enrollment Analysis" worksheet, rename the value field as "Percentage". Show values as % of Row Total to four decimal place.'
+            ]
+        ]
+    },
+    Challange02: {
+        nombre: "Challenge 2 First Up Consultants",
+        archivo: "./projects/CERTIFICACION MO-211/First_Up_Consultants.xlsx",
+        preguntas: [
+            [
+                'On the "Billing Analysis" worksheet, in the PivotTable, create a calculated field named "Total Profit" that subtracts the "Project Cost" from the "Amount Payable". Display the calculated field for each client'
+            ],
+            [
+
+                `On the "Billing Analysis" worksheet, in the PivotTable, create a calculated field named "Total " that divide the "Project Cost" from the "Amount Payable". Display the calculated field for each client.`
+            ]
+        ]
+    },
+    Challange03: {
+        nombre: "Challenge 3 Cruise Bookings",
+        archivo: "./projects/CERTIFICACION MO-211/First_Up_Consultants.xlsx",
+        preguntas: [
+            [
+                'Within the ‘Reservations’ worksheet, apply an icon set–based conditional formatting rule to the ‘Excursions’ column such that the Red Flag icon is rendered only in instances where a fee has been levied, while explicitly suppressing the display of any icon for entries that are not subject to a fee.'
+            ],
+            [
+
+                `•  Within the ‘Payment Due’ worksheet, starting at cell D4, generate a PivotTable sourced from the data on the ‘Reservations’ worksheet. Configure the PivotTable to enumerate each distinct ‘Code’ as a row label. For every ‘Code’, summarize the ‘Balance’, ‘Deposit’, and ‘Total’ fields, and additionally include a calculated value that multiplies the ‘Guests’ field by the ‘Cabin’ field.`
+            ]
+        ]
+    },
 };
 
 // Estado global
@@ -341,23 +389,6 @@ const projects = {
 
         utils.selectRandomVariants(nextProjectKey);
         this.load();
-    },
-
-    reset() {
-        if (!confirm("¿Estás seguro de que quieres reiniciar? Se perderá todo el progreso actual.")) {
-            return;
-        }
-
-        timer.stop();
-
-        state.currentProjectIndex = 0;
-        state.currentQuestionIndex = 0;
-        state.secondsRemaining = 80 * 60;
-        state.questionStates = {};
-
-        utils.selectRandomVariants(state.projectKeys[0]);
-        this.load();
-        timer.start();
     }
 };
 
@@ -373,4 +404,21 @@ document.getElementById("submit-project").onclick = () => {
     alert("Proyecto enviado.");
     projects.submit();
 };
-document.getElementById("reset-btn").onclick = () => projects.reset();
+
+// BOTÓN REINICIAR: Ahora configurado para saltar a Challenge01
+document.getElementById("reset-btn").onclick = () => {
+    const targetKey = "Challenge01";
+    const index = state.projectKeys.indexOf(targetKey);
+
+    if (index !== -1) {
+        state.currentProjectIndex = index;
+        state.currentQuestionIndex = 0;
+        state.questionStates = {};
+
+        utils.selectRandomVariants(targetKey);
+        projects.load();
+
+        // Redirigir al archivo de Excel del Challenge01
+        window.location.href = bancoDePreguntas[targetKey].archivo;
+    }
+};
