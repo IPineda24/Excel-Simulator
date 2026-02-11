@@ -191,7 +191,7 @@ For example, '123' will be displayed as '#00123'`,
     },
     Challange03: {
         nombre: "Challenge 3 Cruise Bookings",
-        archivo: "./projects/CERTIFICACION MO-211/First_Up_Consultants.xlsx",
+        archivo: "./projects/CERTIFICACION MO-211/Cruise Bookings.xlsm",
         preguntas: [
             [
                 'Within the ‘Reservations’ worksheet, apply an icon set–based conditional formatting rule to the ‘Excursions’ column such that the Red Flag icon is rendered only in instances where a fee has been levied, while explicitly suppressing the display of any icon for entries that are not subject to a fee.'
